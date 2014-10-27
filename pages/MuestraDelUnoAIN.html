@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--
+		15. Implementa MuestraDelUnoAlN que pida un número entero y que muestre la secuencia del 1 al número indicado. En caso de no poder generarse la secuencia
+		(menor que 1), que lo indique.
+	-->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script type="text/javascript" src="js/MuestraDelUnoAIN.js">
+	</script>
+</head>
+<body>
+	<h2>Introduce un número para mostrar la secuencia (mayor que 1)</h2>
+
+	<input id="number" type="text" /><br />
+	<br />
+	<input type="button" value="Aceptar" id="aceptar" 
+		onClick="sendNumber(document.getElementById('number').value)"/>	
+		<br />
+		<div id="resultado" style="text-align: justify;"></div>  	
+</body>
+</html>

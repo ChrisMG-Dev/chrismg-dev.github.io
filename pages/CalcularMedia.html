@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--
+		14. Implementa CalculaMedia que pida números hasta que se introduzca uno negativo.
+		Entonces, que muestre la media
+	-->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>CalculaMedia</title>
+	<script type="text/javascript" src="js/CalcularMedia.js"></script>
+</head>
+<body>
+	<h2>Introduce número de uno en uno para calcular la media,
+		escribe un número negativo para terminar</h2>
+
+	<input id="number" type="text" /><span id="resultado"></span><br />
+	<br />
+	<input type="button" value="Aceptar" id="aceptar" 
+		onClick="sendNumber(document.getElementById('number').value)"/>		
+</body>
+</html>

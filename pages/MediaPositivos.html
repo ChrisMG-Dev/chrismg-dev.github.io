@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--
+		Implementa MediaPositivos que calcule la media de una serie de números positivos,
+		introducidos por teclado. Dejará de leer cuando el usuario introduzca el 0.
+	-->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>MediaPositivos</title>
+	<script type="text/javascript" src="js/MediaPositivos.js"></script>
+</head>
+<body>
+	<h2>Introduce número de uno en uno para calcular la media,
+		escribe 0 para terminar</h2>
+
+	<input id="number" type="text" /><span id="resultado"></span><br />
+	<br />
+	<input type="button" value="Aceptar" id="aceptar" 
+		onClick="sendNumber(document.getElementById('number').value)"/>	
+</body>
+</html>
