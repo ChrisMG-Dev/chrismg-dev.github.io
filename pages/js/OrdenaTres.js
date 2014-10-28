@@ -20,7 +20,7 @@ function sortNumbers(){
 	}
 
 	if(numbers.every(isNumber)){
-		resultado.innerHTML = numbers.sort();
+		resultado.innerHTML = numbers.sort(function(a, b){return a-b}););
 	}	
 }
 
