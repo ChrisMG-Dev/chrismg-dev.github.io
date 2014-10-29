@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<meta charset="utf-8" >
+		<title>Pregunta 2</title>
+		<script>
+		function responder(){
+			var valor = window.parent.extraeValor()
+			if (valor==0)
+				alert ("Debe elegir una respuesta")
+			else{
+				window.parent.respuestas[1] = valor
+				window.location = "pregunta3.html"
+				}
+		}
+		</script>
+	</head>
+	<body bgcolor=ff8833>
+		<h2>Pregunta 2: ¿Cuantos amigos tienes?</h2>
+		<form name=f1>
+			<input type=radio value="Entre 100 y 500" name="respuesta"> Entre 100 y 500
+			<br>
+			<input type=radio value="Entre 20 y 100" name="respuesta"> Entre 20 y 100
+			<br>
+			<input type=radio value="Menos de 20" name="respuesta"> Menos de 20
+			<br>
+			<input type="button" value="Responder" onClick="responder()">
+		</form>
+	</body>
+</html>

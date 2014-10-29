@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Frame 1</title>
+	<script language="JavaScript"> 
+		function actualiza_2_frames(){ 
+			window.parent.frames[1].location="http://www.google.com" 
+			window.location="http://www.yahoo.es" 
+		} 
+	</script>
+</head>
+<body bgcolor="#ff9999"> 
+	<br> 
+	<br> 
+	<a href="javascript:actualiza_2_frames()">Actualiza dos frames con un solo enlace</a> 
+</body>
+</html>

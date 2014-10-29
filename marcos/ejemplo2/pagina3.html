@@ -1,0 +1,21 @@
+<html>
+	<body>
+		<script>
+		function cambiarColor(){
+		/*
+			colorin = parent.frames[0].document.forms[0].color.options[parent.frames[0].document.forms[0].color.selectedIndex].value
+			idFrame = parent.frames[1].document.forms[0].marcos.options[parent.frames[1].document.forms[0].marcos.selectedIndex].value
+			window.parent.frames[idFrame].document.bgColor = colorin
+		*/
+			campoColor = parent.frames[0].document.forms[0].color
+			colorin = campoColor.options[campoColor.selectedIndex].value
+			campoFrame = parent.frames[1].document.forms[0].marcos
+			idFrame = campoFrame.options[campoFrame.selectedIndex].value
+			window.parent.frames[idFrame].document.bgColor = colorin
+		}
+		</script>
+		<form>
+			<input type="Button" value="Cambiar Color" onclick="cambiarColor()">
+		</form>
+	</body>
+</html>
