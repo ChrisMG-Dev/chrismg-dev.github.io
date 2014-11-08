@@ -4,7 +4,6 @@
  * Las matrices se inicializarán de forma aleatoria con enteros entre 0 y 10.
  * Se visualizarán sumandos y suma.
  */
-
 function getOutputMatriz(matriz) {
     var html = "",
         i,

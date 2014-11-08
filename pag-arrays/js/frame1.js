@@ -8,7 +8,7 @@ var ruta = "../ejercicios/",
         "EJ2": ruta + "tablaDecimales.html",
         "EJ3": ruta + "secuencia.html",
         "EJ4": ruta + "sumaMatrices.html",
-        "EJ5": ruta + "multiplicaMatrices.html"
+        "EJ5": ruta + "multiplicarMatrices.html"
     };
 
 /*
