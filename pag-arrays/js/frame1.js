@@ -6,9 +6,9 @@ var ruta = "../ejercicios/",
     ejercicios = {
         "EJ1": ruta + "notas.html",
         "EJ2": ruta + "tablaDecimales.html",
-        "EJ3": ruta + "ejercicio3.html",
-        "EJ4": ruta + "ejercicio4.html",
-        "EJ5": ruta + "ejercicio5.html"
+        "EJ3": ruta + "secuencia.html",
+        "EJ4": ruta + "sumaMatrices.html",
+        "EJ5": ruta + "multiplicaMatrices.html"
     };
 
 /*

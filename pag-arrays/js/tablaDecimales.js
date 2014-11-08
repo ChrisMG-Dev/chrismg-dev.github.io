@@ -13,8 +13,8 @@ function checkDimensiones(filas, columnas) {
 
     if (isNaN(filas) || isNaN(columnas)) {
         message = "Debe introducir un número válido.";
-    } else if (filas <= 0 || columnas <= 0) {
-        message = "Tiene que ser superior a 0.";
+    } else if (filas <= 2 || columnas <= 2) {
+        message = "Tiene que ser superior a 2.";
     } else {
         message = "";
         ok = true;
