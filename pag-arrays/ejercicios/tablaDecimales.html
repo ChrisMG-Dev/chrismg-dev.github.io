@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Tabla decimales</title>
+		<script src="../js/tablaDecimales.js" type="text/javascript" ></script>
+		<style type="text/css">
+			.info {width: 65px;display: inline-block;}
+			#resultado {font-weight: bold;}
+			tr, td {
+				border: 1px solid black;
+				text-align: center;
+				width: 20px;
+				height: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>
+		Crea la página tablaDecimales.html que cree una matriz de decimales. Pide las dimensiones (filas y columnas). Se inicializa con valores aleatorios entre 1 y 100. Visualiza el array, localiza los valores máximo y mínimo y muestra tanto estos valores como la posición que ocupan en la matriz
+		</h3>
+		<div id="ejercicio">
+			<h4>Introduce las dimensiones</h4>
+			<span class="info">Filas</span>&nbsp;
+			<input type="text" id="filas" />
+			<br /><br />
+			<span class="info">Columnas</span>&nbsp;
+			<input type="text" id="columnas" />
+			<br /><br />
+			<input id="btnTabla" type="button" value="Crear tabla" />
+			<br />
+			<span id="msgOutput" style="color: red"></span><br />
+			<div id="resultado"></div>
+		</div>
+	</body>
+</html>
