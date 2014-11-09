@@ -37,7 +37,8 @@ function updateRightFrame() {
 function updateLeftFrame() {
     var seleccionado = getSelectedOption("seccion");
     if (seleccionado === "TEO") {
-        window.parent.frames[1].location.replace("teoria/teoria.html");
+        window.parent.frames[1].location.replace("../teoria/teoria.html");
+        document.getElementById("ejercicios").style.display = "none";
     } else if (seleccionado === "EJ") {
         document.getElementById("ejercicios").style.display = "inline-block";
     }

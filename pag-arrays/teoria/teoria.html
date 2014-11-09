@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Teoría</title>
+    </head>
+    <body>
+        <h1>Teoría de arrays</h1>
+        <h2>Creación de arrays</h2>
+        <p>Se pueden crear de dos formas</p>
+        <ol>
+            <li>var array = new Array();</li>
+            <li>var array = [];</li>
+        </ol>
+        <p>Ambas formas crean un array vacío</p>
+        <p>Si se define de la siguiente forma: var array = new Array(10);<br>
+        Se creará un array con un tamaño de 10, pero de elemento vacíos
+        [ , , , , , , , , , , ]</p>
+        <p>Algo parecido ocurre si hacemos lo siguiente:<br/>
+        var array = []; array[2] = "hola";<br/>
+        Resultado: [ , ,"hola"]</p>
+        <h2>Eliminar elementos de un array</h2>
+        <p>array.length; // 8<br />
+        delete array[2];<br />
+        array[2]; // undefined</p>
+        <p>Borrar un elemento de array no libera la memoria. Con el operador delete simplemente lo reemplaza por undefined</p>
+        <p>Se recomendable utilizar el método splice en su lugar</p>
+        <p>var a = ["a","b","c","d"];<br />
+        a.splice(1,3); // ["a"];
+        </p>
+        <p>Otra forma es la siguiente:<br />
+        a.length = 0; // []
+        </p>
+        <h2>Añadir elementos a un array</h2>
+        <p>Los elementos de añaden normalmente de la siguiente manera: <br />
+        array[indice] = "elemento";</p>
+        <p>El inconveniente es que si nuestra intención es añadir al final del array, debemos conocer cual es el siguiente índice<br />
+        Se puede hacer de la siguiente manera: <br />
+        array[array.length] = elemento;</p>
+        <p>Para añadir al final de un array, existe un método push<br />
+            array.push(elemento);</p>
+        <h2>Recorrido de un array</h2>
+        <p>La forma mas común de recorrer un array de la siguiente: <br />
+            for (i = 0;i &lt; array.length; i+= 1) {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;document.write(array[i]);<br />
+        }</p>
+        <p>Existe otra forma más elegante de hacer esto</p>
+        <pre>
+for each (var manzana in bolsaManzanas) {
+    document.write(manzana);
+}
+        </pre>
+        <h2>Tipos de arrays</h2>
+        <h3>Arrays paralelos - Vectores</h3>
+        <p>Son los mas simples y comunes, son los que hemos visto hasta ahora:<br />
+            var a = [1, 2, 3, 4];<br />
+            a[1]; // 2</p>
+        <h3>Arrays Multidimensionales</h3>
+        <p>Son arrays que contienen a su vez arrays</p>
+        <p>Ejemplo:<br/>
+            var alumnos = [["Pepe","Gomez"],["María","Pérez"]]<br />
+            alumnos[0][1] // Gomez</p>
+        <h2>Métodos</h2>
+        <h3>Concat</h3>
+        <p>Permite concatenar un array con otro</p>
+        <pre>
+var a = ["h","o"];
+var b = ["l", "a"];
+a.concat(b); // ["h","o","l","a"]
+        </pre>
+        <h3>Sort</h3>
+        <p>Ordena los elementos de un array</p>
+        <pre>
+var a = [3,6,1,2];
+a.sort() // [1,2,3,6];
+        </pre>
+        <h3>Reverse</h3>
+        <p>Invierte un array</p>
+        <pre>
+var a [1,2,3];
+a.reverse(); // [3,2,1]            
+        </pre>
+    </body>
+</html>
