@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tutorial Array</title>
+        <script type="text/javascript" src="js/ejercicios.js"></script>
+        <style type="text/css" media="screen">
+        p {
+        font-size: 22px;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Tutorial Array</h1>
+        <div id="ejercicios">
+            <h2>Ejercicio 1</h2>
+            <ol>
+                <li>Create an array styles with elements “Jazz”, “Blues”.</li>
+                <li>Append a value “Rock’n’Roll”</li>
+                <li>Replace the second value from tail by “Classic”. The array should become <br/>
+                “Jazz”,”Classic”,”Rock’n’Roll”. The code should work for any array length.</li>
+                <li>Extract the last value from the array and alert it.</li>
+            </ol>
+            <pre>
+                var arr = ["Jazz", "Blues"];
+                arr.push("Rock' n' Roll");
+                arr[1] = "Classic";
+                alert(arr.pop()); // Rock' n Roll
+            </pre>
+            <h2>Ejercicio 2</h2>
+            <ul>
+                <li>Write a code to alert a random value from array arr:<br />
+                var arr = ["Plum","Orange","Donkey","Carrot","JavaScript"]
+                </li>
+            </ul>
+            <pre>
+                alert(arr[Math.round(
+                    Math.random() * (arr.length - 1)
+                    )
+                ]);
+            </pre>
+            <h2>Ejercicio 3</h2>
+            <ul>
+                <li>Create a function filterNumeric(arr) which takes an array and returns new array<br />
+                which contains only numeric values from arr.</li>
+            </ul>
+            <pre>
+                var arr = ["Uno", 1, "Dos", 2];
+
+                function filterNumeric(arr) {
+                    var newArr = [],
+                        i;
+                    for (i = 0; i &lt; arr.length; i += 1) {
+                        if (!isNaN(arr[i])) {
+                            newArr.push(arr[i]);
+                        }
+                    }
+                    return newArr;
+                }
+
+                filterNumeric(arr) //[1, 2]
+            </pre>
+            <h2>Ejercicio 4</h2>
+            <ul>
+                <li>An object has a className property which keeps it’s class names delimited by spaces:<br/>
+                <pre>
+                var obj = {
+                    className: 'open menu'
+                }
+                </pre>
+                </li>
+                <li>Write a function addClass(obj, cls) which adds a class cls, but only if it doesn’t yet exist</li>
+            </ul>
+            <pre>
+            var obj = {
+                className: 'open menu'
+            }
+
+            function addClass(obj, cls) {
+                var spObj,
+                    i;
+
+                spObj = obj.className.split(" ");
+
+                for (i in spObj) {
+                    if (spObj[i] === cls) {
+                        return;
+                    }
+                }
+                obj.className += " " + cls;
+            }
+
+            addClass(obj, "menu"); // className: 'open menu';
+            addClass(obj, "hola"); // className: 'open menu hola';
+            </pre>
+            <h2>Ejercicio 5</h2>
+            <ul>
+                <li>Create a function camelize(str) which transforms a string from <br/>
+                    “my-short-string” to “myShortString”.
+                <pre>
+            camelize("background-color") == 'backgroundColor'
+            camelize("list-style-image") == 'listStyleImage'
+                </pre>
+                </li>
+            </ul>
+            <pre>
+            var dashedString = "my-short-string";
+
+            function cameliza(str) {
+                var camelized = dashedString.split("-"),
+                    normalizedString = [camelized[0]],
+                    i;
+                for (i = 1; i &lt; camelized.length; i += 1) {
+                    normalizedString.push(camelized[i].charAt(0).toUpperCase() + camelized[i].substring(1));
+                }
+
+                return normalizedString.join("");
+            }
+            </pre>
+        </div>
+    </body>
+</html>
