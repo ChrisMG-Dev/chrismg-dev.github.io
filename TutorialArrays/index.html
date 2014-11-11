@@ -118,6 +118,83 @@
                 return normalizedString.join("");
             }
             </pre>
+            <h2>Ejercicio 6</h2>
+            <ul>
+                <li>What will be the result? Why?<br/>
+                <pre>
+                arr = ["a", "b"]
+                arr.push( function() { alert(this) } )
+                arr[arr.length-1]()  // ?
+                </pre>
+                </li>
+                <p>El resultado es un alert mostrando: a,b,function(){alert(this)}<br />
+                Ya que this se refiere al propio objeto, muestra su contenido</p>
+            </ul>
+            <h2>Ejercicio 7</h2>
+            <ul>
+                <li>An object has a className property which keeps it’s class names delimited by spaces:<br />
+                <pre>
+                var obj = {
+                    className: 'open menu'
+                    }
+                </pre>
+                </li>
+                <li>Write a function removeClass(obj, cls) which removes a class cls if it is set:<br />
+                <pre>
+                removeClass(obj, 'open') // obj.className='menu'
+                removeClass(obj, 'blabla')  // no changes (no class to remove)
+                </pre>
+                </li>
+            </ul>
+            <pre>
+                var obj = {
+                        className: 'open menu'
+                }
+
+                function removeClass(obj, cls) {
+                    var spObj,
+                        i;
+
+                    spObj = obj.className.split(" ");
+
+                    for (i in spObj) {
+                        if (spObj[i] === cls) {
+                             spObj.splice(i,1);
+                        }
+                    }
+
+                    obj.className = spObj.join(" ");
+                }   
+            </pre>
+            <h2>Ejercicio 8</h2>
+            <ul>
+                <li>Create a function filterNumericInPlace(arr) which takes an array<br />
+                and removes all non-numeric values from it. <br />
+                An example of how it should work:<br/>
+                <pre>
+                arr = ["a", 1, "b", 2];
+                filterNumericInPlace(arr);
+                alert(arr)  // [1,2]
+                </pre>
+                </li>
+            </ul>
+            <pre>
+            
+            var numeros = ["Hola", 1, 6, "Adios"];
+
+            function filterNumericInPlace(arr){
+                var i,
+                    arrLength = arr.length;
+                for (i = 0; i &lt; arrLength; i += 1) {
+                    if (isNaN(arr[i])) {
+                        arr.splice(i,1);
+                        arrLength -= 1;
+                    }
+                }
+            }
+
+            filterNumericInPlace(numeros); // [1,6]
+            </pre>
         </div>
     </body>
 </html>
