@@ -195,6 +195,98 @@
 
             filterNumericInPlace(numeros); // [1,6]
             </pre>
+            <h2>Ejercicio 9</h2>
+            <ul>
+                <li>Create a function ageSort(people) to sort array of people objects by their age.br />
+
+                <pre>
+                var john = { name: "John Smith", age: 23 }
+                var mary = { name: "Mary Key", age: 18 }
+                var bob = { name: "Bob-small", age: 6 }
+
+                var people = [ john, mary, bob ]
+
+                ageSort(people) // now people is [ bob, mary, john ]
+                </pre>
+                </li>
+            </ul>
+            <pre>
+            function ageSort(people) {
+                people.sort(function(a, b) { return a.age - b.age });
+            }   
+
+            alert(people[0].age); // 6
+            alert(people[1].age); // 18
+            alert(people[2].age); // 23
+            </pre>
+            <h2>Ejercicio 10</h2>
+            <ul>
+                <li>Make a generic function filter(arr, func) which filters an array using given function.<br />
+                Only those elements for which func(elem) returns true should compose the result.</li>
+                <li>Every element which pass through and returns new array which contains only numeric values from arr.</li>
+            </ul>
+            <pre>
+            arr = ["a", -1, 2, "b"];
+
+            function isNumeric(value) {
+                if (isNaN(value)){ 
+                    return false;
+                }
+                return true;
+            }
+
+            function filter(arr, func) {
+                return arr.filter(func);
+            } 
+
+            arr = filter(arr, isNumeric); // [-1, 2]              
+            </pre>
+            <h2>Ejercicio 11</h2>
+            <ol>
+                <li>Create a list of consecutive integers from two to n: (2, 3, 4, ..., n).</li>
+                <li>Set p=2, the first prime number.</li>
+                <li>Strike from the list all multiples of p less than or equal to n. (2p, 3p, 4p, etc.)</li>
+                <li>Set p to first not striked number in the list after p.</li>
+                <li>Repeat steps 3-4 until p*p > n.</li>
+                <li>All the remaining numbers in the list are prime.</li>
+            </ol>
+            <pre>
+            var enteros = [],
+                i,
+                n = 200,
+                prime = 2;
+
+            for (i = 2; i &lt; n; i += 1) {
+                enteros.push(i);
+            }
+
+            function findPrimeNumbers(enteros, p, n) {
+                var i,
+                    nextP;
+
+                for (i = p; i &lt; enteros.length; i += 1) {
+                    if (enteros[i] % p === 0) {
+                        if (p &lt;= enteros.length) {
+                            enteros.splice(i, 1);
+                        }
+                    }
+                }
+
+                for (i = 0; i &lt; enteros.length; i += 1) {
+                    if (p === enteros[i]) {
+                        nextP = enteros[i + 1];
+                    }
+                }
+
+                if (p * p &lt; enteros.length) {
+                    findPrimeNumbers(enteros, nextP, enteros.length);
+                }
+
+                return enteros;
+            }
+
+            console.log(findPrimeNumbers(enteros, prime, enteros.length));
+            </pre>
         </div>
     </body>
 </html>
