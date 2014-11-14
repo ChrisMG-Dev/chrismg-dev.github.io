@@ -1,0 +1,31 @@
+﻿body {
+    text-align: center;
+}
+
+td, th {
+    border: 1px solid black;
+    border-spacing: 0px;
+}
+
+td, th {
+    padding: 10px;
+    font-size: 18px;
+}
+
+th {
+    background-color: wheat;
+}
+
+td {
+    background-color: aliceblue;
+}
+
+table, th {
+    border-radius: 10px 10px 3px 3px;
+}
+
+table {
+    width: 50%;
+    margin: 0 auto;
+    border-spacing: 0px;
+}

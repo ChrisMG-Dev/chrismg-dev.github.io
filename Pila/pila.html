@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Pila</title>
+    <style type="text/css">
+        label {
+            display: inline-block;
+            width: 80px;
+            text-align: left;
+        }
+
+        fieldset {
+            padding: 10px 10px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        #errorBox {
+            color: red;
+        }
+    </style>
+    <script type="text/javascript" src="js/persona.js"></script>
+    <script type="text/javascript" src="js/pila.js"></script>
+</head>
+<body>
+    <h1>Introduce Datos</h1>
+    <form>
+        <fieldset>
+            <p><label>Nombre: </label><input type="text" id="nombre" name="nombre" /></p>
+            <p><label>Apellidos: </label><input type="text" id="apellidos" name="apellidos" /></p>
+            <p><label>DNI: </label><input type="text" id="dni" name="dni" /></p>
+        </fieldset>
+        <br />
+        <input type="button" value="Añadir" id="agregar" />&nbsp;&nbsp;
+        <input type="button" value="Mostrar" id="mostrar" />
+        <br /><br />
+        <span id="errorBox"></span>
+    </form>
+</body>
+</html>
