@@ -31,7 +31,9 @@ function muestraGato() {
         fechaNac,
         i,
         errorOutput,
-        errorBox;
+        errorBox,
+        ventanaGato,
+        html_content;
 
     nombre = document.getElementById("nombre").value;
     raza = document.getElementById("raza");
@@ -67,8 +69,7 @@ function muestraGato() {
 
    	// Si todo va bien, seguir
    	errorBox.innerHTML = errorOutput;
-   	var gato = new Gato(nombre, fechaNac, raza);
-   	var html_content;
+   	gato = new Gato(nombre, fechaNac, raza);
    	html_content = "<html>"
    		+ "<head>" 
    		+ "    <meta charset='utf-8'>"
@@ -113,7 +114,7 @@ function muestraGato() {
    		+ "</body>"
    		+ "</html>"
 
-   	var ventanaGato = window.open("", "_blank", "width=600,height=600");
+   	ventanaGato = window.open("", "_blank", "width=600,height=600");
    	ventanaGato.document.write(html_content);
    	ventanaGato.document.close();
 
