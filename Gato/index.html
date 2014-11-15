@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Lindo Gatito</title>
+	<link rel="stylesheet" href="css/gato.css">
+	<script type="text/javascript" src="js/gato.js"></script>
+	<script type="text/javascript" src="js/dataInfo.js"></script>
+</head>
+<body>
+	<div id="contenedor">
+		<h2>Pida su gato, le entregaremos uno por correo</h2>
+		<img src="img/gato-llega.png" />
+		<div id="pedido">
+			<p><label>Nombre</label>
+			<input type="text" id="nombre">
+			</p>
+			<p><label>Raza</label>
+			<select id="raza">
+				<option value="Siames" selected>Siamés</option>
+				<option value="Persa">Persa</option>
+				<option value="Bengali">Bengalí</option>
+				<option value="Van Turco">Van Turco</option>
+			</select>
+			</p>
+			<p><label>Fecha de nacimiento</label>
+			<input type="date" id="fechaNacimiento" step="1" min="1995-01-01" max="2014-12-31" title="formato: dd/mm/aa">
+			</p>
+			<br>
+			<input type="button" id="crearGato" value="Pedir gato" />
+		</div>
+		<br>
+		<br>
+		<div id="errorMsg"></div>
+	</div>
+</body>
+</html>

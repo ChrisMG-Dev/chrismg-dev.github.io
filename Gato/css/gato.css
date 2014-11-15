@@ -1,0 +1,69 @@
+#contenedor {
+	margin: 0 auto;
+	width: 960px; }
+
+#errorMsg {
+	background-image: url("../icons/error.png");
+	background-size: 20px 20px;
+	background-repeat: no-repeat;
+	background-position: 10px;
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+	text-align: left;
+	font-size: 22px;
+	color: red;
+	padding-left: 34px;
+}
+ 
+div#pedido {
+	display: block;
+	margin: 0 auto;
+	width: 50%; }
+ 
+ 
+h2 {
+	margin: 5px;
+	text-align: center; }
+ 
+ 
+img {
+	display: block;
+	margin: 0 auto;
+	width: 20%; }
+ 
+ 
+input[type=button] {
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	background-color: #FFB76F;
+	border-radius: 7px;
+	display: block;
+	font-size: 26px;
+	margin: 0 auto;
+	padding: 5px 12px;
+	width: 50%; }
+ 
+	input[type=button]:active { background-color: #DB6D00; }
+ 
+	input[type=button]:hover { background-color: #FF9933; }
+ 
+ 
+input[type=text], input[type=date], select {
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+	font-size: 20px;
+	padding: 5px 12px; }
+ 
+ 
+input[type=text]:hover, select:hover, input[type=date]:hover { background-color: #E1E2DE; }
+ 
+ 
+label {
+	display: inline-block;
+	font-size: 20px;
+	width: 140px; }
+ 
+ 
+p span { color: #FF7E40; }
