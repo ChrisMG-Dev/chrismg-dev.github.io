@@ -1,0 +1,57 @@
+#contenedor {
+	width: 600px;
+	margin: 0 auto;
+	background-color: #FFD6AC;
+}
+
+#aspectoGato, p {
+	display: block;
+	width: 70%;
+	margin: 0 auto;
+}
+
+#aspectoGato img{
+	display: block;
+	width: 240px;
+	height: 160px;
+	margin: 0 auto;
+}
+
+body {
+	background: url("../img/background.png") repeat;
+}
+
+p {
+	font-size: 26px;
+	margin-bottom: 10px;
+	border: 1px solid #FFAB57;
+}
+
+#cajaBotones {
+	width: 60%;
+	margin: 0 auto;
+}
+
+#cajaBotones input[type=button]{
+	display: inline-block;
+	margin: 0 auto;
+	padding: 5px 10px;
+	font-size: 26px;
+	margin-top: 10px;
+	margin-right: 5px;	
+}
+
+span.label {
+	background-color: #FF8000;
+	font-weight: bold;
+	display: inline-block;
+	width: 140px;
+}
+
+span.data {
+	vertical-align: top;
+}
+
+h1 {
+	text-align: center;
+}

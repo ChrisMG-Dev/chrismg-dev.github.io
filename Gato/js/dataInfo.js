@@ -1,6 +1,30 @@
 /*
  * Recoge datos del gato y los muestra
  */
+
+function jugar(gato) {
+	gato.jugar();
+}
+
+function dormir(gato) {
+	gato.dormir();
+}
+
+function comer(gato) {
+	gato.comer();
+}
+
+
+function refrescarDatos(ventanaGato, gato) {
+	ventanaGato.document.getElementById("peso").innerHTML = gato.peso + "KG";
+	ventanaGato.document.getElementById("estado").innerHTML = gato.estado;
+	ventanaGato.document.getElementById("aspecto").src = gato.aspecto;
+	
+	if (gato.estado === "Muerto") {
+		ventanaGato.document.getElementById("cajaBotones").innerHTML = "";
+	}   		
+}
+
 function muestraGato() {
     var nombre,
         raza,
@@ -25,10 +49,13 @@ function muestraGato() {
    	if (nombre === "") {
    		errorOutput = "El nombre está vacío";
    	} else if (!isNaN(nombre)) {
-   		errorOutput = "Su gato debería tener letras en su nombre...";
+   		errorOutput = "Su gato debería tener al menos una letra en su nombre...";
    	} else if (fechaNac == "Invalid Date") {
    		errorOutput = "Fecha introducida incorrecta";
-   	} else {
+   	} else if (fechaNac >= new Date()) {
+   		errorOutput = "Por favor, introduzca una fecha anterior al día de hoy";
+   	}
+   	else {
    		errorOutput = "";
    	}
 
@@ -41,9 +68,72 @@ function muestraGato() {
    	// Si todo va bien, seguir
    	errorBox.innerHTML = errorOutput;
    	var gato = new Gato(nombre, fechaNac, raza);
+   	var html_content;
+   	html_content = "<html>"
+   		+ "<head>" 
+   		+ "    <meta charset='utf-8'>"
+   		+ "    <title>" + gato.nombre + "</title>"
+	    + "    <link rel='stylesheet' href='css/migato.css'>"
+	    + "    <script type='text/javascript' src='js/migato.js'></script>"
+   		+ "</head>"
+   		+ "<body>"
+   		+ "    <div id='contenedor'>"
+   		+ "        <h1>" + gato.nombre + "</h1>"
+   		+ "        <div id='aspectoGato'><img id='aspecto' src='" + gato.aspecto + "'></div>"
+   		+ "        <br />"
+   		+ "        <p class='infoBlock'>"
+   		+ "            <span class='label'>Raza: </span>"
+   		+ "            <span class='data' id='raza'>" + gato.raza
+   		+ "        </p>"
+   		+ "        <p class='infoBlock'>"
+   		+ "            <span class='label'>Nacimiento: </span>"
+   		+ "            <span class='data' id='fecha'>" + gato.fechaNacimiento.getFullYear() 
+   		+ "/" +     (gato.fechaNacimiento.getMonth() + 1) + "/" + gato.fechaNacimiento.getDate()
+   		+ "        </p>"
+   		+ "        <p class='infoBlock'>"
+   		+ "            <span class='label'>Edad: </span>"
+   		+ "            <span class='data' id='edad'>" + gato.mostrarEdad() + " años"
+   		+ "        </p>"
+   		+ "        <p class='infoBlock'>"
+   		+ "            <span class='label'>Peso: </span>"
+   		+ "            <span class='data' id='peso'>" + gato.peso + "KG"
+   		+ "        </p>"
+   		+ "        <p class='infoBlock'>"
+   		+ "            <span class='label'>Estado: </span>"
+   		+ "            <span class='data' id='estado'>" + gato.estado
+   		+ "        </p>"
+   		+ "        <br />"
+   		+ "        <div id='cajaBotones'>"
+   		+ "            <input type='button' value='Jugar' id='jugar'>&nbsp;"
+   		+ "            <input type='button' value='Comer' id='comer'>&nbsp;"
+   		+ "            <input type='button' value='Dormir' id='dormir'>"
+   		+ "        </div>"
+   		+ "        <br />"
+   		+ "    </div>"
+   		+ "</body>"
+   		+ "</html>"
+
    	var ventanaGato = window.open("", "_blank", "width=600,height=600");
-   	ventanaGato.document.write(gato.mostrarEdad());
+   	ventanaGato.document.write(html_content);
    	ventanaGato.document.close();
+
+   	ventanaGato.window.onload = function () {
+		ventanaGato.document.getElementById("jugar").onclick = function() {
+		    jugar(gato);
+		    refrescarDatos(ventanaGato, gato);
+		}
+
+		ventanaGato.document.getElementById("comer").onclick = function() {
+		    comer(gato);
+		    refrescarDatos(ventanaGato, gato);
+		}  
+
+		ventanaGato.document.getElementById("dormir").onclick = function() {
+		    dormir(gato);
+		    refrescarDatos(ventanaGato, gato);
+		}  
+
+   	};
 
 }
 

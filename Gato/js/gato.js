@@ -10,26 +10,26 @@ var peso_razas = {
 },
 	aspectoPorEstado = {
         "Jugando": {
-            "1": "../img/gato-jugando1.png",
-            "2": "../img/gato-jugando2.png",
-            "3": "../img/gato-jugando3.png"
+            "1": "img/gato-jugando1.png",
+            "2": "img/gato-jugando2.png",
+            "3": "img/gato-jugando3.png"
         },
 
         "Comiendo": {
-            "1": "../img/gato-comiendo1.png",
-            "2": "../img/gato-comiendo2.png",
-            "3": "../img/gato-comiendo3.png",
-            "4": "../img/gato-comiendo4.png",
-            "5": "../img/gato-comiendo5.png"
+            "1": "img/gato-comiendo1.png",
+            "2": "img/gato-comiendo2.png",
+            "3": "img/gato-comiendo3.png",
+            "4": "img/gato-comiendo4.png",
+            "5": "img/gato-comiendo5.png"
         },
 
         "Durmiendo": {
-            "1": "../img/gato-durmiendo1.png",
-            "2": "../img/gato-durmiendo2.png"
+            "1": "img/gato-durmiendo1.png",
+            "2": "img/gato-durmiendo2.png"
         },
 
         "Muerto": {
-        	"1": "../img/gato-muerto.png"
+        	"1": "img/gato-muerto.png"
         }
     }
 
@@ -39,12 +39,12 @@ function Gato(nombre, fechaNacimiento, raza) {
     this.raza = raza;
     this.peso = peso_razas[raza];
     this.estado = "Jugando";
-    this.aspecto = "../img/gato-jugando3.png";
+    this.aspecto = "img/gato-jugando3.png";
 }
 
 Gato.prototype.jugar = function() {
     this.estado = "Jugando";
-    this.peso -= 0.2;
+    this.peso -= 0.5;
     this.comprobarPeso();
     this.cambiarAspecto();
 }
@@ -64,7 +64,7 @@ Gato.prototype.dormir = function() {
 Gato.prototype.comprobarPeso = function() {
     if (this.peso > 20 || this.peso < 4.5) {
         this.estado = "Muerto";
-        cambiarAspecto();
+        this.cambiarAspecto();
     }
 }
 
@@ -80,12 +80,10 @@ Gato.prototype.mostrarEdad = function() {
 
     hoy = new Date();
     anio_hoy = hoy.getFullYear();
-    console.log(anio_hoy);
     mes_hoy = hoy.getMonth() + 1;
     dia_hoy = hoy.getDate();
 
     anio_nac = this.fechaNacimiento.getFullYear();
-    console.log(anio_nac);
     mes_nac = this.fechaNacimiento.getMonth() + 1;
     dia_nac = this.fechaNacimiento.getDate();
 
@@ -102,7 +100,7 @@ Gato.prototype.mostrarEdad = function() {
     return edad;
 }
 
-Gato.prototype.cambiarAspecto() {
+Gato.prototype.cambiarAspecto = function () {
 	do {
 
 		// Ineficiente, pendiente de buscar mejora
