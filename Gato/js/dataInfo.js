@@ -40,7 +40,7 @@ function muestraGato() {
 
    	// Si todo va bien, seguir
    	errorBox.innerHTML = errorOutput;
-   	var gato = new Gato(nombre, fechaNac, raza, 10);
+   	var gato = new Gato(nombre, fechaNac, raza);
    	var ventanaGato = window.open("", "_blank", "width=600,height=600");
    	ventanaGato.document.write(gato.mostrarEdad());
    	ventanaGato.document.close();

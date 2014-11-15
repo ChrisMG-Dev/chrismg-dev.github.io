@@ -1,6 +1,11 @@
+body {
+	background: url("../img/background.png") repeat;
+}
+
 #contenedor {
 	margin: 0 auto;
-	width: 960px; }
+	width: 960px;
+	background-color: #FFD6AC; }
 
 #errorMsg {
 	background-image: url("../icons/error.png");
@@ -24,6 +29,7 @@ div#pedido {
  
 h2 {
 	margin: 5px;
+	font-size: 30px;
 	text-align: center; }
  
  
