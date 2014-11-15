@@ -51,9 +51,9 @@ function muestraGato() {
    	} else if (!isNaN(nombre)) {
    		errorOutput = "Su gato debería tener al menos una letra en su nombre...";
    	} else if (fechaNac == "Invalid Date") {
-   		errorOutput = "Fecha introducida incorrecta";
+   		errorOutput = "Fecha introducida incorrecta, formato aaaa/mm/dd";
    	} else if (fechaNac >= new Date()) {
-   		errorOutput = "Por favor, introduzca una fecha anterior al día de hoy";
+   		errorOutput = "Por favor, introduzca una fecha anterior al día de hoy. Formato aaaa/mm/dd";
    	}
    	else {
    		errorOutput = "";
