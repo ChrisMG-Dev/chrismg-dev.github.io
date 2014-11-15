@@ -115,8 +115,8 @@ function muestraGato() {
    		+ "</html>"
 
    	ventanaGato = window.open("", "_blank", "width=600,height=600");
+   	ventanaGato.document.open();
    	ventanaGato.document.write(html_content);
-   	ventanaGato.document.close();
 
    	ventanaGato.window.onload = function () {
 		ventanaGato.document.getElementById("jugar").onclick = function() {
@@ -135,6 +135,8 @@ function muestraGato() {
 		}  
 
    	};
+
+   	ventanaGato.document.close();
 
 }
 
