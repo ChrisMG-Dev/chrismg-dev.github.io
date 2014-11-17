@@ -1,0 +1,111 @@
+<!--
+Mediante prototype, agrega los métodos sumar, restar, trasponer y multiplicar a la clase ArraysMatematicos. Recuerda que el estado de un array deberían de ser los elementos.
+Recuerda las restricciones y posibilidades de un Array:
+Sobre las dimensines de los arrays implicados (unidimensional, bidimensional...)
+Sobre las longitudes de los arrays implicados (1 en adelante)
+Sobre los contenidos de los arrays implicados (numéricos)
+Podemos rellenar un Array con valores aleatorios o directamente desde teclado.
+Una vez creada la clase, demuestra su funcionamiento en una página bien diseñada. Evita las cajas de texto y hazla lo más dinámica posible.
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Array Matemáticos</title>
+	<style>
+
+		h1 {
+			text-align: center;
+		}
+
+		h3 {
+			text-align: center;
+		}
+
+		#contenedor {
+			width: 960px;
+			margin: 0 auto;
+		}
+
+		.matriz {
+			border: 3px solid #ACAEA2;
+		}
+
+		.bloque label {
+			display: inline-block;
+			width: 100px;
+		}
+
+		input[type=text] {
+			border-radius: 5px;
+			width: 200px;
+			transition-property: background-color;
+    		transition-duration: 1s;
+    		transition-timing-function: linear;
+		}
+
+		input[type=text]:hover {
+			background-color: #B9DCFF;
+		}
+
+		.matriz {
+			width: 50%;
+			margin: 0 auto;
+			margin-bottom: 16px;
+			padding: 5px 15px;
+			transition-property: background-color;
+    		transition-duration: 1s;
+    		transition-timing-function: linear;
+    		transition-delay: 0.2s;
+		}
+
+		.matriz:hover {
+			background-color: #CFD0C8;
+		}
+
+		.matriz:nth-child(odd) {
+			border-radius: 13px 13px 0 0;
+		}
+
+		.matriz:nth-child(even) {
+			border-radius: 0px 0px 13px 13px;
+		}
+
+		label {
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div id="contenedor">
+		<noscript>
+			JavaScript se encuentra deshabilitado en su navegador, por favor <br />
+			Active JavaScript o utilice un navegador que lo incorpore.
+		</noscript>
+		<h1>Arrays matemáticos</h2>
+		<div class="matriz">
+			<h3>Matriz 1</h3>
+			<p class="bloque">
+				<label for="filas1">Filas: </label>
+				<input type="text" id="filas1" />
+			</p>
+			<p class="bloque">
+				<label for="columnas1">Columnas: </label>
+				<input type="text" id="columnas1" />
+			</p>			
+		</div>
+		<div class="matriz">
+			<h3>Matriz 2</h3>
+			<p class="bloque">
+				<label for="filas2">Filas: </label>
+				<input type="text" id="filas2" />
+			</p>
+			<p class="bloque">
+				<label for="columnas2">Columnas: </label>
+				<input type="text" id="columnas2" />
+			</p>			
+		</div>
+	</div>
+</body>
+</html>
