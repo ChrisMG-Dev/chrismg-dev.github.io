@@ -14,90 +14,28 @@ Una vez creada la clase, demuestra su funcionamiento en una página bien diseña
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Array Matemáticos</title>
 	<script type="text/javascript" src="js/array.js"></script>
-	<style>
-	.bloque label {
-		display: inline-block;
-		width: 100px; }
-	 
-	 
-	#contenedor {
-		margin: 0 auto;
-		width: 960px; }
-	 
-	 
-	h1 { text-align: center; }
-	 
-	 
-	h3 { text-align: center; }
-	 
-	 
-	input[type=text] {
-		-moz-border-radius: 5px;
-		-moz-transition-duration: 1s;
-		-moz-transition-property: background-color;
-		-moz-transition-timing-function: linear;
-		-o-transition-duration: 1s;
-		-o-transition-property: background-color;
-		-o-transition-timing-function: linear;
-		-webkit-border-radius: 5px;
-		-webkit-transition-duration: 1s;
-		-webkit-transition-property: background-color;
-		-webkit-transition-timing-function: linear;
-		border-radius: 5px;
-		transition-duration: 1s;
-		transition-property: background-color;
-		transition-timing-function: linear;
-		width: 200px; }
-	 
-		input[type=text]:hover { background-color: #B9DCFF; }
-	 
-	 
-	label { font-size: 20px; }
-	 
-	 
-	.matriz {
-		-moz-transition-delay: 0.2s;
-		-moz-transition-duration: 1s;
-		-moz-transition-property: background-color;
-		-moz-transition-timing-function: linear;
-		-o-transition-delay: 0.2s;
-		-o-transition-duration: 1s;
-		-o-transition-property: background-color;
-		-o-transition-timing-function: linear;
-		-webkit-transition-delay: 0.2s;
-		-webkit-transition-duration: 1s;
-		-webkit-transition-property: background-color;
-		-webkit-transition-timing-function: linear;
-		border: 3px solid #ACAEA2;
-		margin: 8px auto;
-		padding: 5px 15px;
-		transition-delay: 0.2s;
-		transition-duration: 1s;
-		transition-property: background-color;
-		transition-timing-function: linear;
-		width: 50%; }
-	 
-		.matriz:nth-child(even) {
-			-moz-border-radius: 0px 0px 13px 13px;
-			-webkit-border-radius: 0px 0px 13px 13px;
-			border-radius: 0px 0px 13px 13px; }
-	 
-		.matriz:nth-child(odd) {
-			-moz-border-radius: 13px 13px 0 0;
-			-webkit-border-radius: 13px 13px 0 0;
-			border-radius: 13px 13px 0 0; }
-	 
-		.matriz:hover { background-color: #CFD0C8; }
-	</style>
+	<script type="text/javascript" src="js/maquetacionArray.js"></script>
+	<link rel="stylesheet" href="css/array.css" />
 </head>
 <body>
 	<div id="contenedor">
 		<noscript>
-			JavaScript se encuentra deshabilitado en su navegador, por favor <br />
-			Active JavaScript o utilice un navegador que lo incorpore.
+		 Para utilizar las funcionalidades completas de este sitio es necesario tener
+		 JavaScript habilitado. Aquí están las <a href="http://www.enable-javascript.com/es/"
+		 target="_blank"> instrucciones para habilitar JavaScript en tu navegador web</a>.
 		</noscript>
 		<h1>Arrays matemáticos</h2>
-		<div class="matriz">
+		<div id="array">
+
+		</div>
+		<div id="selectTipo">
+			<input id="unidimensional" type="radio" name="tipoArray" value="unidimensional" />
+			<label for="unidimensional">Unidimensional</label>
+			<input id="bidimensional" type="radio" name="tipoArray" value="bidimensional" />
+			<label for="bidimensional">Bidimensional</label>
+		</div>
+		<!--
+		<div class="array">
 			<h3>Matriz 1</h3>
 			<p class="bloque">
 				<label for="filas1">Filas: </label>
@@ -108,7 +46,7 @@ Una vez creada la clase, demuestra su funcionamiento en una página bien diseña
 				<input type="text" id="columnas1" />
 			</p>			
 		</div>
-		<div class="matriz">
+		<div class="array">
 			<h3>Matriz 2</h3>
 			<p class="bloque">
 				<label for="filas2">Filas: </label>
@@ -119,6 +57,11 @@ Una vez creada la clase, demuestra su funcionamiento en una página bien diseña
 				<input type="text" id="columnas2" />
 			</p>			
 		</div>
+		-->
+	</div>
+	<div id="controlarVector">
+		<input type="button" value="Añadir vector" id="addVector" />
+		<input type="button" value="Sumar vectores" id="sumVectores" />
 	</div>
 </body>
 </html>
