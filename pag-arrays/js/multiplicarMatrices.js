@@ -29,7 +29,7 @@ function getOutputSumaMatrices(operando1, operando2, suma) {
         + getOutputMatriz(operando1)
         + "<br /><h4>Operando 2</h4><br />"
         + getOutputMatriz(operando2)
-        + "<br /><h4>Suma</h4><br />"
+        + "<br /><h4>Producto</h4><br />"
         + getOutputMatriz(suma);
 
     return html;
@@ -42,8 +42,8 @@ function checkUserInput(filas1, columnas1, filas2, columnas2) {
 
     if (((isNaN(filas1) || isNaN(columnas1)) || isNaN(filas2) || isNaN(columnas2))) {
         message = "Debe introducir un número válido.";
-    } else if ((filas1 <= 2 || columnas1 <= 2) || (filas2 <= 2 || columnas2 <= 2)) {
-        message = "Los valores deben ser de al menos 3";
+    } else if ((filas1 < 2 || columnas1 < 2) || (filas2 < 2 || columnas2 < 2)) {
+        message = "Los valores no pueden ser inferiores a 2";
 
     } else if (columnas1 !== filas2) {
         message = "Debe haber el mismo número de columnas de la matriz 1 que"

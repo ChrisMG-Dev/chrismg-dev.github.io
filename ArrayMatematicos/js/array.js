@@ -28,6 +28,7 @@ ArraysMatematicos.prototype.sumar = function() {
 		k,
 		resultado;
 
+	// Unidimensional
 	if (this.unidimensional) {
 		resultado = [];
 		for (i = 0; i < this.arrays[0].length; i += 1) {
@@ -38,6 +39,7 @@ ArraysMatematicos.prototype.sumar = function() {
 				resultado[j] += this.arrays[i][j];
 			}
 		}
+	// Bidimensional
 	} else {
 		resultado = [];
 		for (i = 0; i < this.arrays[0].length; i += 1) {
@@ -50,12 +52,56 @@ ArraysMatematicos.prototype.sumar = function() {
 			}
 		}
 
-
 		for (i = 0; i < this.arrays.length; i += 1) {
 			for (j = 0; j < this.arrays[i].length; j += 1) {
 				for (k = 0; k < this.arrays[i][j].length; k += 1) {
 					resultado[j][k] += this.arrays[i][j][k];
 					console.log(this.arrays);
+				}
+			}
+		}
+	}
+	return resultado;
+}
+
+ArraysMatematicos.prototype.restar = function() {
+	var i,
+		j,
+		k,
+		resultado;
+
+	// Unidimensional
+	if (this.unidimensional) {
+		resultado = [];
+		for (i = 0; i < this.arrays[0].length; i += 1) {
+			resultado[i] = 0;
+		}
+		for (i = 0; i < this.arrays.length; i += 1) {
+			for (j = 0; j < this.arrays[i].length; j += 1) {
+				if (i == 0) {
+					resultado[j] = this.arrays[i][j];
+				} else {
+					resultado[j] -= this.arrays[i][j];
+				}
+			}
+		}
+	// Bidimensional
+	} else {
+		resultado = [];
+		for (i = 0; i < this.arrays[0].length; i += 1) {
+			resultado.push([]);
+		}
+
+		for (i = 0; i < this.arrays[0].length; i += 1) {
+			for (j = 0; j < this.arrays[0][i].length; j += 1) {
+				resultado[i][j] = 0;
+			}
+		}
+
+		for (i = 0; i < this.arrays.length; i += 1) {
+			for (j = 0; j < this.arrays[i].length; j += 1) {
+				for (k = 0; k < this.arrays[i][j].length; k += 1) {
+					resultado[j][k] -= this.arrays[i][j][k];
 				}
 			}
 		}

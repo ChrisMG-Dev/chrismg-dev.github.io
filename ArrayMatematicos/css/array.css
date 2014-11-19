@@ -80,6 +80,43 @@ label { font-size: 20px; }
 
 #controlarVector {
 	display: block;
-	width: 40%;
+	width: 200px;
 	margin: 0 auto;	
+}
+
+#controlarVector input {
+	width: 100%;
+	font-size: 22px;
+	padding: 10px 15px;
+	margin: 10px 0;
+}
+
+#reloader input {
+	width: 20%;
+	font-size: 22px;
+	padding: 10px 15px;
+	margin: 10px 0;
+	display: block;
+	width: 200px;
+	margin: 10px auto;	
+}
+
+#errorMsg {
+	text-align: center;
+	margin: 0 auto;
+	font-size: 26px;
+	font-weight: bold;
+}
+
+.numero {
+	text-align: center;
+	display: inline-block;
+	border: 1px solid black;
+	padding: 10px 10px;
+	font-size: 22px;
+	width: 55px;
+}
+
+.numero:hover {
+	background-color: #FF8000;
 }

@@ -18,6 +18,7 @@ Una vez creada la clase, demuestra su funcionamiento en una página bien diseña
 	<link rel="stylesheet" href="css/array.css" />
 </head>
 <body>
+	<div id="errorMsg"></div>
 	<div id="contenedor">
 		<noscript>
 		 Para utilizar las funcionalidades completas de este sitio es necesario tener
@@ -34,34 +35,15 @@ Una vez creada la clase, demuestra su funcionamiento en una página bien diseña
 			<input id="bidimensional" type="radio" name="tipoArray" value="bidimensional" />
 			<label for="bidimensional">Bidimensional</label>
 		</div>
-		<!--
-		<div class="array">
-			<h3>Matriz 1</h3>
-			<p class="bloque">
-				<label for="filas1">Filas: </label>
-				<input type="text" id="filas1" />
-			</p>
-			<p class="bloque">
-				<label for="columnas1">Columnas: </label>
-				<input type="text" id="columnas1" />
-			</p>			
-		</div>
-		<div class="array">
-			<h3>Matriz 2</h3>
-			<p class="bloque">
-				<label for="filas2">Filas: </label>
-				<input type="text" id="filas2" />
-			</p>
-			<p class="bloque">
-				<label for="columnas2">Columnas: </label>
-				<input type="text" id="columnas2" />
-			</p>			
-		</div>
-		-->
 	</div>
 	<div id="controlarVector">
 		<input type="button" value="Añadir vector" id="addVector" />
 		<input type="button" value="Sumar vectores" id="sumVectores" />
+		<input type="button" value="Restar vectores" id="restarVectores" />
+		<input type="button" value="Multiplicar vectores" id="multVectores" />
+	</div>
+	<div id="reloader">
+		<input type="button" onClick="history.go(0)" value="Recargar" />
 	</div>
 </body>
 </html>

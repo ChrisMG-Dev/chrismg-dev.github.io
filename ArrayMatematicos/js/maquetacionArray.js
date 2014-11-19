@@ -1,156 +1,233 @@
 contador_array = 0;
 
-function modoUnidimensional () {
-	contador_array = 1;
-	var contenedor = document.getElementById("contenedor");
-	contenedor.innerHTML = "";
-	var arrayBox = document.createElement("div");
-	arrayBox.className = "array";
+function modoUnidimensional() {
 
-	var titulo = document.createElement("h3");
-	titulo.innerHTML = "Vector " + contador_array;
+    var contenedor = document.getElementById("contenedor"),
+        arrayBox = document.createElement("div"),
+        titulo = document.createElement("h3"),
+        bloque = document.createElement("p"),
+        label = document.createElement("label"),
+        caja = document.createElement("input"),
+        bloqueMin = document.createElement("p"),
+        labelMin = document.createElement("label"),
+        cajaMin = document.createElement("input"),
+        bloqueMax = document.createElement("p"),
+        labelMax = document.createElement("label"),
+        cajaMax = document.createElement("input");
 
-	var bloque = document.createElement("p");
-	bloque.className = "bloque";
+    document.getElementById("addVector").style.visibility = "visible";
+    document.getElementById("sumVectores").style.visibility = "visible";
+    document.getElementById("reloader").style.visibility = "visible";
+    document.getElementById("restarVectores").style.visibility = "visible";
+    document.getElementById("multVectores").style.display = "none";
 
-	var label = document.createElement("label");
-	label.innerHTML = "Elementos: ";
+    contador_array = 1;
 
-	var caja = document.createElement("input");
-	caja.type = "text";
-	caja.id = "elementos";
-	caja.className = "valorVector";
-
-	var bloqueMin = document.createElement("p");
-	bloqueMin.className = "bloque";
-
-	var labelMin = document.createElement("label");
-	labelMin.innerHTML = "Min: ";
-
-	var cajaMin = document.createElement("input");
-	cajaMin.type = "text";
-	cajaMin.id = "min" + contador_array;
-
-	var bloqueMax = document.createElement("p");
-	bloqueMax.className = "bloque";
-	var labelMax = document.createElement("label");
-	labelMax.innerHTML = "Max: ";
-
-	var cajaMax = document.createElement("input");
-	cajaMax.type = "text";
-	cajaMax.id = "max" + contador_array;
-
-	arrayBox.appendChild(titulo);
-	bloque.appendChild(label);
-	bloque.appendChild(caja);
-	bloqueMin.appendChild(labelMin);
-	bloqueMin.appendChild(cajaMin);
-	bloqueMax.appendChild(labelMax);
-	bloqueMax.appendChild(cajaMax);
-	arrayBox.appendChild(bloque);
-	arrayBox.appendChild(bloqueMin);
-	arrayBox.appendChild(bloqueMax);
-	contenedor.appendChild(arrayBox);
+    contenedor.innerHTML = "";
+    arrayBox.className = "array";
+    titulo.innerHTML = "Vector " + contador_array;
+    bloque.className = "bloque";
+    label.innerHTML = "Elementos: ";
+    caja.type = "text";
+    caja.id = "elementos";
+    caja.className = "valorVector";
+    bloqueMin.className = "bloque";
+    labelMin.innerHTML = "Min: ";
+    cajaMin.type = "text";
+    cajaMin.id = "min" + contador_array;
+    bloqueMax.className = "bloque";
+    labelMax.innerHTML = "Max: ";
+    cajaMax.type = "text";
+    cajaMax.id = "max" + contador_array;
+    arrayBox.appendChild(titulo);
+    bloque.appendChild(label);
+    bloque.appendChild(caja);
+    bloqueMin.appendChild(labelMin);
+    bloqueMin.appendChild(cajaMin);
+    bloqueMax.appendChild(labelMax);
+    bloqueMax.appendChild(cajaMax);
+    arrayBox.appendChild(bloque);
+    arrayBox.appendChild(bloqueMin);
+    arrayBox.appendChild(bloqueMax);
+    contenedor.appendChild(arrayBox);
 }
 
 function addVector() {
-	contador_array++;
-	var contenedor = document.getElementById("contenedor");
-	var arrayBox = document.createElement("div");
-	arrayBox.className = "array";
 
-	var titulo = document.createElement("h3");
-	titulo.innerHTML = "Vector " + contador_array;
+    var contenedor = document.getElementById("contenedor"),
+        arrayBox = document.createElement("div"),
+        titulo = document.createElement("h3"),
+        bloqueMin = document.createElement("p"),
+        labelMin = document.createElement("label"),
+        cajaMin = document.createElement("input"),
+        bloqueMax = document.createElement("p"),
+        labelMax = document.createElement("label"),
+        cajaMax = document.createElement("input");
 
-	var bloqueMin = document.createElement("p");
-	bloqueMin.className = "bloque";
+    contador_array++;
 
-	var labelMin = document.createElement("label");
-	labelMin.innerHTML = "Min: ";
-
-	var cajaMin = document.createElement("input");
-	cajaMin.type = "text";
-	cajaMin.id = "min" + contador_array;
-
-	var bloqueMax = document.createElement("p");
-	bloqueMax.className = "bloque";
-	var labelMax = document.createElement("label");
-	labelMax.innerHTML = "Max: ";
-
-	var cajaMax = document.createElement("input");
-	cajaMax.type = "text";
-	cajaMax.id = "max" + contador_array;
-	arrayBox.appendChild(titulo);
-	bloqueMin.appendChild(labelMin);
-	bloqueMin.appendChild(cajaMin);
-	bloqueMax.appendChild(labelMax);
-	bloqueMax.appendChild(cajaMax);
-	arrayBox.appendChild(bloqueMin);
-	arrayBox.appendChild(bloqueMax);
-	contenedor.appendChild(arrayBox);	
+    arrayBox.className = "array";
+    titulo.innerHTML = "Vector " + contador_array;
+    bloqueMin.className = "bloque";
+    labelMin.innerHTML = "Min: ";
+    cajaMin.type = "text";
+    cajaMin.id = "min" + contador_array;
+    bloqueMax.className = "bloque";
+    labelMax.innerHTML = "Max: ";
+    cajaMax.type = "text";
+    cajaMax.id = "max" + contador_array;
+    arrayBox.appendChild(titulo);
+    bloqueMin.appendChild(labelMin);
+    bloqueMin.appendChild(cajaMin);
+    bloqueMax.appendChild(labelMax);
+    bloqueMax.appendChild(cajaMax);
+    arrayBox.appendChild(bloqueMin);
+    arrayBox.appendChild(bloqueMax);
+    contenedor.appendChild(arrayBox);
 }
 
-function mostrarResultado (resultado) {
-	var contenedor = document.getElementById("contenedor");
-	var arrayBox = document.createElement("div");
-	arrayBox.className = "array";
+function mostrarResultado(resultado, tituloh3) {
+    var contenedor = document.getElementById("contenedor"),
+        arrayBox = document.createElement("div"),
+        numero,
+        titulo = document.createElement("h3");
 
-	var titulo = document.createElement("h3");
-	titulo.innerHTML = "Suma";
+    arrayBox.className = "array";
+    titulo.innerHTML = tituloh3;
+    arrayBox.appendChild(titulo);
 
-	arrayBox.appendChild(titulo);
-	arrayBox.appendChild(document.createTextNode(resultado));
-	contenedor.appendChild(arrayBox);
+    for (indice in resultado) {
+        numero = document.createElement("div");
+        numero.className = "numero";
+        numero.innerHTML = resultado[indice];
+        arrayBox.appendChild(numero);
+    }
+
+    contenedor.appendChild(arrayBox);
+}
+
+function generarValores() {
+    var elementos = document.getElementById("elementos").value,
+        sumando = [],
+        i,
+        j,
+        min,
+        max,
+        suma,
+        numero,
+        bloque = document.getElementsByClassName("array"),
+        cabecera;
+
+
+    for (i = 0; i < contador_array; i += 1) {
+        min = parseInt(document.getElementById("min" + (i + 1)).value);
+        max = parseInt(document.getElementById("max" + (i + 1)).value);
+        sumando[i] = [];
+        for (j = 0; j < elementos; j += 1) {
+            sumando[i][j] = Math.round(
+                Math.random() * (max - min) + min
+            );
+        }
+    }
+
+    for (i = 0; i < bloque.length; i += 1) {
+        cabecera = document.createElement("h3");
+        titulo = document.createTextNode("Vector " + (i + 1));
+        cabecera.appendChild(titulo);
+        bloque[i].innerHTML = "";
+        bloque[i].appendChild(cabecera);
+
+        for (indice in sumando[i]) {
+            numero = document.createElement("div");
+            numero.className = "numero";
+            numero.innerHTML = sumando[i][indice];
+            bloque[i].appendChild(numero);
+        }
+    }
+
+    document.getElementById("addVector").style.display = "none";
+    document.getElementById("sumVectores").style.display = "none";
+    document.getElementById("restarVectores").style.display = "none";
+    document.getElementById("multVectores").style.display = "none";
+
+    return sumando;
 
 }
 
-function generarValores () {
-	var elementos = document.getElementById("elementos").value,
-		sumando = [],
-		i,
-		j,
-		min,
-		max,
-		suma;
+function checkUserInput() {
 
+    var output = "",
+        errorMsg = document.getElementById("errorMsg"),
+        elementos = parseInt(document.getElementById("elementos").value);
 
-	for (i = 0; i < contador_array; i += 1) {
-		min = parseInt(document.getElementById("min" + (i + 1)).value);
-		max = parseInt(document.getElementById("max" + (i + 1)).value);
-		sumando[i] = [];
-		for (j = 0; j < elementos; j += 1) {
-			sumando[i][j] = Math.round(
-				Math.random() * (max - min) + min
-			);
-		}
-	}
+    errorMsg.style.color = "red";
 
-	var bloque = document.getElementsByClassName("array");
+    if (elementos > 100 || elementos < 2) {
+        output = "Por favor, introduzca un número de elementos entre 2 y 100.";
+    } else if (isNaN(elementos)) {
+        output = "El número de elementos debe indicarse mediante un número.";
+    } else if (elementos == "") {
+        output = "Debe introducir el número de elementos a producir.";
+    }
 
-	for (var i = 0; i < bloque.length; i += 1) {
-		var cabecera = document.createElement("h3");
-		titulo = document.createTextNode("Vector " + (i + 1));
-		cabecera.appendChild(titulo);
-		bloque[i].innerHTML = "";
-		bloque[i].appendChild(cabecera);
-		bloque[i].appendChild(document.createTextNode("Valores: " + sumando[i]));
-	}
+    if (output != "") {
+        errorMsg.innerHTML = output;
+        return false;
+    }
 
-	document.getElementById("addVector").style.display = "none";
-	document.getElementById("sumVectores").style.display = "none";
+    for (i = 0; i < contador_array; i += 1) {
+        min = parseInt(document.getElementById("min" + (i + 1)).value);
+        max = parseInt(document.getElementById("max" + (i + 1)).value);
 
-	return sumando;
+        if (min === "" || max === "") {
+            output = "Los campos no deben estar vacíos.";
+        } else if (isNaN(min) || isNaN(max)) {
+            output = "Los campos deben contenedor un número.";
+        } else if (min >= max) {
+            output = "El mínimo debe ser inferior al máximo.";
+        } else if (min < 1) {
+            output = "El mínimo debe ser de al menos 1.";
+        } else if (max > 10000) {
+            output = "Por favor, introduzca un valor máximo de hasta 10000";
+        }
+    }
+
+    errorMsg.innerHTML = output;
+
+    if (output != "") {
+        return false;
+    }
+
+    return true;
+}
+
+function sumarVectores() {
+    var inputIsOk = checkUserInput();
+    if (inputIsOk) {
+        sumando = generarValores();
+        array = new ArraysMatematicos(sumando, true);
+        mostrarResultado(array.sumar(), "Suma");
+    }
+}
+
+function restarVectores() {
+    var inputIsOk = checkUserInput();
+    if (inputIsOk) {
+        res = generarValores();
+        array = new ArraysMatematicos(res, true);
+        mostrarResultado(array.restar(), "Restado");
+    }
 
 }
 
-function sumarVectores () {
-
-	sumando = generarValores();
-	array = new ArraysMatematicos(sumando, true);
-	mostrarResultado(array.sumar());
-}
 window.onload = function () {
-	document.getElementById("unidimensional").onclick = modoUnidimensional;
-	document.getElementById("addVector").onclick = addVector;
-	document.getElementById("sumVectores").onclick = sumarVectores;
+    document.getElementById("unidimensional").onclick = modoUnidimensional;
+    document.getElementById("addVector").onclick = addVector;
+    document.getElementById("addVector").style.visibility = "hidden";
+    document.getElementById("sumVectores").onclick = sumarVectores;
+    document.getElementById("sumVectores").style.visibility = "hidden";
+    document.getElementById("restarVectores").style.visibility = "hidden";
+    document.getElementById("restarVectores").onclick = restarVectores;
+    document.getElementById("multVectores").style.visibility = "hidden";
+    document.getElementById("reloader").style.visibility = "hidden";
 };
