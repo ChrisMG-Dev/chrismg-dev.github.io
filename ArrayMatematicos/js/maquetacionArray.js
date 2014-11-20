@@ -1,6 +1,14 @@
 var contador_array = 0;
 var unidimensional = true;
 
+function mostrarControles () {
+    document.getElementById("addVector").style.visibility = "visible";
+    document.getElementById("sumVectores").style.visibility = "visible";
+    document.getElementById("reloader").style.visibility = "visible";
+    document.getElementById("restarVectores").style.visibility = "visible";
+    document.getElementById("multVectores").style.visibility = "visible";
+}
+
 function maquetarPagina(tituloArray) {
     var contenedor = document.getElementById("contenedor"),
         arrayBox = document.createElement("div"),
@@ -15,11 +23,7 @@ function maquetarPagina(tituloArray) {
         labelMax = document.createElement("label"),
         cajaMax = document.createElement("input");
 
-    document.getElementById("addVector").style.visibility = "visible";
-    document.getElementById("sumVectores").style.visibility = "visible";
-    document.getElementById("reloader").style.visibility = "visible";
-    document.getElementById("restarVectores").style.visibility = "visible";
-    document.getElementById("multVectores").style.visibility = "visible";
+    mostrarControles();
 
     contador_array = 1;
 
@@ -125,15 +129,30 @@ function generarValores() {
         bloque = document.getElementsByClassName("array"),
         cabecera;
 
-
-    for (i = 0; i < contador_array; i += 1) {
-        min = parseInt(document.getElementById("min" + (i + 1)).value);
-        max = parseInt(document.getElementById("max" + (i + 1)).value);
-        sumando[i] = [];
-        for (j = 0; j < elementos; j += 1) {
-            sumando[i][j] = Math.round(
-                Math.random() * (max - min) + min
-            );
+    if (unidimensional) {
+        for (i = 0; i < contador_array; i += 1) {
+            min = parseInt(document.getElementById("min" + (i + 1)).value);
+            max = parseInt(document.getElementById("max" + (i + 1)).value);
+            sumando[i] = [];
+            for (j = 0; j < elementos; j += 1) {
+                sumando[i][j] = Math.round(
+                    Math.random() * (max - min) + min
+                );
+            }
+        }
+    } else {
+        for (i = 0; i < contador_array; i += 1) {
+            min = parseInt(document.getElementById("min" + (i + 1)).value);
+            max = parseInt(document.getElementById("max" + (i + 1)).value);
+            sumando[i] = [];
+            for (j = 0; j < elementos; j += 1) {
+                sumando[i][j] = [];
+                for (k = 0; k < elementos; k += 1) {
+                    sumando[i][j][k] = Math.round(
+                        Math.random() * (max - min) + min
+                    );
+                }
+            }
         }
     }
 
