@@ -22,6 +22,7 @@ function ArraysMatematicos(arrays, unidimensional) {
 		this.arrays.push(arrays[i]);
 	}
 }
+
 ArraysMatematicos.prototype.sumar = function() {
 	var i,
 		j,
