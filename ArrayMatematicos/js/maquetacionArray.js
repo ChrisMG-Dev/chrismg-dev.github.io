@@ -1,4 +1,5 @@
-contador_array = 0;
+var contador_array = 0;
+var unidimensional = true;
 
 function maquetarPagina(tituloArray) {
     var contenedor = document.getElementById("contenedor"),
@@ -61,12 +62,19 @@ function addVector() {
         cajaMin = document.createElement("input"),
         bloqueMax = document.createElement("p"),
         labelMax = document.createElement("label"),
-        cajaMax = document.createElement("input");
+        cajaMax = document.createElement("input"),
+        tipoArray;
 
     contador_array++;
-
     arrayBox.className = "array";
-    titulo.innerHTML = "Vector " + contador_array;
+
+    if (unidimensional) {
+        tipoArray = "Vector";
+    } else {
+        tipoArray = "Matriz"
+    }
+
+    titulo.innerHTML = tipoArray + " " + contador_array;
     bloqueMin.className = "bloque";
     labelMin.innerHTML = "Min: ";
     cajaMin.type = "text";
@@ -228,10 +236,20 @@ function multiplicarVectores() {
 }
 
 function modoBidimensional() {
+    unidimensional = false;
+    document.getElementById("addVector").value = "Añadir Matriz";
+    document.getElementById("sumVectores").value = "Sumar Matrices";
+    document.getElementById("restarVectores").value = "Restar Matrices";
+    document.getElementById("multVectores").value = "Mult. Matrices";
     maquetarPagina("Matriz");
 }
 
 function modoUnidimensional() {
+    unidimensional = true;
+    document.getElementById("addVector").value = "Añadir Vector";
+    document.getElementById("sumVectores").value = "Sumar Vectores";
+    document.getElementById("restarVectores").value = "Restar Vectores";
+    document.getElementById("multVectores").value = "Mult. Vectores";
     maquetarPagina("Vector");
 }
 
