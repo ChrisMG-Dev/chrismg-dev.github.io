@@ -109,3 +109,31 @@ ArraysMatematicos.prototype.restar = function() {
 	}
 	return resultado;
 }
+
+ArraysMatematicos.prototype.multiplicar = function () {
+	var i,
+		j,
+		k,
+		resultado;
+
+	// Unidimensional
+	if (this.unidimensional) {
+		resultado = [];
+
+		for (i = 0; i < this.arrays[0].length; i += 1) {
+			resultado[i] = 0;
+		}
+
+		for (i = 0; i < this.arrays.length; i += 1) {
+			for (j = 0; j < this.arrays[i].length; j += 1) {
+				if (i == 0) {
+					resultado[j] = this.arrays[i][j];
+				} else {
+					resultado[j] *= this.arrays[i][j];
+				}
+			}
+		}
+	} // Fin Unidimensional
+
+	return resultado;
+}

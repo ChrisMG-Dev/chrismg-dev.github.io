@@ -18,7 +18,7 @@ function maquetarPagina(tituloArray) {
     document.getElementById("sumVectores").style.visibility = "visible";
     document.getElementById("reloader").style.visibility = "visible";
     document.getElementById("restarVectores").style.visibility = "visible";
-    document.getElementById("multVectores").style.display = "none";
+    document.getElementById("multVectores").style.visibility = "visible";
 
     contador_array = 1;
 
@@ -49,14 +49,6 @@ function maquetarPagina(tituloArray) {
     arrayBox.appendChild(bloqueMin);
     arrayBox.appendChild(bloqueMax);
     contenedor.appendChild(arrayBox);    
-}
-
-function modoBidimensional() {
-    maquetarPagina("Matriz");
-}
-
-function modoUnidimensional() {
-    maquetarPagina("Vector");
 }
 
 function addVector() {
@@ -226,6 +218,23 @@ function restarVectores() {
     }
 }
 
+function multiplicarVectores() {
+    var inputIsOk = checkUserInput();
+    if (inputIsOk) {
+        res = generarValores();
+        array = new ArraysMatematicos(res, true);
+        mostrarResultado(array.multiplicar(), "Producto");
+    }
+}
+
+function modoBidimensional() {
+    maquetarPagina("Matriz");
+}
+
+function modoUnidimensional() {
+    maquetarPagina("Vector");
+}
+
 window.onload = function () {
     document.getElementById("unidimensional").onclick = modoUnidimensional;
     document.getElementById("bidimensional").onclick = modoBidimensional;
@@ -236,5 +245,6 @@ window.onload = function () {
     document.getElementById("restarVectores").style.visibility = "hidden";
     document.getElementById("restarVectores").onclick = restarVectores;
     document.getElementById("multVectores").style.visibility = "hidden";
+    document.getElementById("multVectores").onclick = multiplicarVectores;
     document.getElementById("reloader").style.visibility = "hidden";
 };
