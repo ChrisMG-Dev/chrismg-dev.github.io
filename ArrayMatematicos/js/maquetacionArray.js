@@ -108,10 +108,21 @@ function mostrarResultado(resultado, tituloh3) {
     arrayBox.appendChild(titulo);
 
     for (indice in resultado) {
-        numero = document.createElement("div");
-        numero.className = "numero";
-        numero.innerHTML = resultado[indice];
-        arrayBox.appendChild(numero);
+        if (unidimensional) {
+            numero = document.createElement("div");
+            numero.className = "numero";
+            numero.innerHTML = resultado[indice];
+            arrayBox.appendChild(numero);
+        } else {
+            for (indice2 in resultado[indice]) {
+                numero = document.createElement("div");
+                numero.className = "numero";
+                numero.innerHTML = resultado[indice][indice2];
+                arrayBox.appendChild(numero);   
+            }
+            arrayBox.appendChild(document.createElement("br"));
+            arrayBox.appendChild(document.createElement("br"));
+        }
     }
 
     contenedor.appendChild(arrayBox);
@@ -158,16 +169,31 @@ function generarValores() {
 
     for (i = 0; i < bloque.length; i += 1) {
         cabecera = document.createElement("h3");
-        titulo = document.createTextNode("Vector " + (i + 1));
+        if (unidimensional) {
+            titulo = document.createTextNode("Vector " + (i + 1));
+        } else {
+            titulo = document.createTextNode("Matriz " + (i + 1));
+        }
         cabecera.appendChild(titulo);
         bloque[i].innerHTML = "";
         bloque[i].appendChild(cabecera);
 
         for (indice in sumando[i]) {
-            numero = document.createElement("div");
-            numero.className = "numero";
-            numero.innerHTML = sumando[i][indice];
-            bloque[i].appendChild(numero);
+            if (unidimensional) {
+                numero = document.createElement("div");
+                numero.className = "numero";
+                numero.innerHTML = sumando[i][indice];
+                bloque[i].appendChild(numero);
+            } else {
+                for (indice2 in sumando[i][indice]) {
+                    numero = document.createElement("div");
+                    numero.className = "numero";
+                    numero.innerHTML = sumando[i][indice][indice2];
+                    bloque[i].appendChild(numero);                   
+                }
+                bloque[i].appendChild(document.createElement("br")); 
+                bloque[i].appendChild(document.createElement("br")); 
+            }
         }
     }
 
@@ -231,7 +257,7 @@ function sumarVectores() {
     var inputIsOk = checkUserInput();
     if (inputIsOk) {
         sumando = generarValores();
-        array = new ArraysMatematicos(sumando, true);
+        array = new ArraysMatematicos(sumando, unidimensional);
         mostrarResultado(array.sumar(), "Suma");
     }
 }
@@ -240,7 +266,7 @@ function restarVectores() {
     var inputIsOk = checkUserInput();
     if (inputIsOk) {
         res = generarValores();
-        array = new ArraysMatematicos(res, true);
+        array = new ArraysMatematicos(res, unidimensional);
         mostrarResultado(array.restar(), "Restado");
     }
 }
@@ -249,8 +275,9 @@ function multiplicarVectores() {
     var inputIsOk = checkUserInput();
     if (inputIsOk) {
         res = generarValores();
-        array = new ArraysMatematicos(res, true);
-        mostrarResultado(array.multiplicar(), "Producto");
+        res = res.slice(0, 2);
+        array = new ArraysMatematicos(res, unidimensional);
+        mostrarResultado(array.multiplicar(), "Producto (Solo los dos primeros arrays)");
     }
 }
 

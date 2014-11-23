@@ -134,6 +134,30 @@ ArraysMatematicos.prototype.multiplicar = function () {
 			}
 		}
 	} // Fin Unidimensional
+	else {
+		resultado = [];
+		for (i = 0; i < this.arrays[0].length; i += 1) {
+			resultado.push([]);
+		}
+
+		for (i = 0; i < this.arrays[0].length; i += 1) {
+			for (j = 0; j < this.arrays[0][i].length; j += 1) {
+				resultado[i][j] = 0;
+			}
+		}
+
+		for (p = 0; p < this.arrays.length - 1; p++) {
+		    for (i = 0; i < this.arrays[p].length; i += 1) {
+		        for (j = 0; j < this.arrays[p + 1].length; j += 1) {
+		            suma = 0;
+		            for (k = 0; k < this.arrays[p].length; k += 1) {
+		                suma += this.arrays[p][i][k] * this.arrays[p + 1][k][j];
+		            }
+		            resultado[i][j] = suma;
+		        }
+		    }
+		}
+	}
 
 	return resultado;
 }
