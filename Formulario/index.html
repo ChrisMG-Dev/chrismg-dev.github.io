@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Validación Formulario</title>
+	<style>
+	#contenedor {
+		width: 500px;
+		margin: 0 auto;
+	}
+
+	label {
+		display: inline-block;
+		width: 150px;
+		vertical-align:top;
+	}
+
+	textarea {
+		text-align:justify;
+	}
+	</style>
+</head>
+<body>
+<div id="contenedor">
+	<p class="bloque">
+		<label for="nombre">Nombre completo</label>
+		<input type="text" id="nombre" />	
+		<span id="nombreErr"></span>
+	</p>
+	<p class="bloque">
+		<label for="correo">Dirección de correo</label>
+		<input type="text" id="correo" />
+		<span id="correoErr"></span>	
+	</p>
+	<p class="bloque">
+		<label for="dni">DNI</label>
+		<input type="text" id="dni" />
+		<span id="dniErr"></span>
+	</p>
+	<p class="bloque">
+		<label for="telefono">Teléfono</label>
+		<input type="text" id="telefono" />
+		<span id="telefonoErr"></span>
+	</p>
+	<p class="bloque">
+		<label for="cuenta">Cuenta Corriente</label>
+		<input type="text" id="cuenta" />
+		<span id="cuentaErr"></span>
+	</p>
+	<p class="bloque">
+		<label for="web">URL Sitio Web</label>
+		<input type="text" id="web" />
+		<span id="webErr"></span>
+	</p>
+	<p class="bloque">
+		<label for="fecha">Fecha</label>
+		<input type="text" id="fecha" />
+		<span id="fechaErr"></span>
+	</p>
+	<p class="bloque">
+		<label>Sexo</label>
+		<input type="radio" name="sexo" value="Hombre" />
+		Hombre
+		<input type="radio" name="sexo" value="Mujer" />
+		Mujer
+		<span id="sexoErr"></span>
+	</p>
+	<hr>
+	<p class="bloque">
+		<label>Condiciones de uso</label>
+		<textarea name="condiciones" cols="50" rows="20">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eum totam eaque, doloremque pariatur fugiat, repellendus obcaecati amet deserunt blanditiis veniam quis velit alias in magnam explicabo est dicta quas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi a nihil eum id reprehenderit quibusdam aspernatur aliquam itaque qui minus excepturi, illum quasi. Quidem, dolorem architecto doloremque iure numquam, dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A illum alias cumque odit porro atque quod consectetur veniam ipsa, voluptas dolorum repellendus eveniet dolores error eaque beatae voluptatum! Tempore quos quia quas nesciunt, architecto ducimus, cupiditate officia pariatur! Expedita quae aperiam, saepe assumenda quam adipisci quos dicta sint omnis ipsam ab laboriosam fuga illo cum. Libero similique placeat labore obcaecati cupiditate earum nemo, culpa omnis non nisi, aut voluptatem distinctio dolore fugiat, tenetur! Architecto rem cum facilis illo autem velit obcaecati omnis corporis, dolores assumenda labore laborum dolorum ducimus veniam repellendus consequuntur voluptatum nam atque. Doloribus repellendus iure impedit exercitationem, sequi totam laudantium quos deserunt accusantium alias vel beatae nostrum dicta dolorem culpa, rem error nesciunt tenetur velit tempora aliquam! Laboriosam, ratione, repudiandae.
+		</textarea>
+	</p>
+	<p class="bloque">
+		<input type="checkbox" id="aceptar" /> Acepto las condiciones.
+		<span id="condicionesErr"></span>
+	</p>	
+</div>
+</body>
+</html>
