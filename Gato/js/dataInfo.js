@@ -76,6 +76,7 @@ function muestraGato() {
    		+ "    <title>" + gato.nombre + "</title>"
 	    + "    <link rel='stylesheet' href='css/migato.css'>"
 	    + "    <script type='text/javascript' src='js/migato.js'></script>"
+      + "    <script type='text/javascript' src='js/gato.js'></script>"
    		+ "</head>"
    		+ "<body>"
    		+ "    <div id='contenedor'>"
@@ -118,23 +119,7 @@ function muestraGato() {
    	ventanaGato.document.open();
    	ventanaGato.document.write(html_content);
 
-   	ventanaGato.window.onload = function () {
-		ventanaGato.document.getElementById("jugar").onclick = function() {
-		    jugar(gato);
-		    refrescarDatos(ventanaGato, gato);
-		}
-
-		ventanaGato.document.getElementById("comer").onclick = function() {
-		    comer(gato);
-		    refrescarDatos(ventanaGato, gato);
-		}  
-
-		ventanaGato.document.getElementById("dormir").onclick = function() {
-		    dormir(gato);
-		    refrescarDatos(ventanaGato, gato);
-		}  
-
-   	};
+    ventanaGato.gato = gato;
 
    	ventanaGato.document.close();
 
