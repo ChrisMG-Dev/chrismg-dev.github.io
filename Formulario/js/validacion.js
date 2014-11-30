@@ -1,7 +1,11 @@
 /**
+ * Validación de formularios
  *
- *
+ * @author Christopher Muñoz Godenir <chrismgdaw@gmail.com>
  */
+
+// Campos
+var campos = ["nombre","correo","dni","telefono","tarjeta","web","fecha"];
 
 // Expresiones regulares para cada campo
 var regexp = {
@@ -34,35 +38,43 @@ function validar(elemento) {
     if (elemento.className === "required") {
         if (valor == null || valor.length === 0 || !correcto) {
             elemento.style.border = "2px solid red";
-            //document.getElementById(elemento.id + "Err").innerHTML = errorMsg[elemento.id];
-            return;
+            document.getElementById(elemento.id + "Err").innerHTML = errorMsg[elemento.id];
+            return false;
         }        
         elemento.style.border = "2px solid green";
-        document.getElementById(elemento.id + "Err").innerHTML = "";
+        document.getElementById(elemento.id + "Err").innerHTML = "&nbsp;<img src='icons/valid.ico' height='20px' width='20px'>";
+        return true;
     } 
     else{
-        if (valor == null || valor.length === 0 || !correcto) {
-            elemento.style.border = "default";
-            return;
-        }        
-        elemento.style.border = "2px solid green";
-        document.getElementById(elemento.id + "Err").innerHTML = "";
+        if (correcto) {
+            elemento.style.border = "2px solid green";
+            document.getElementById(elemento.id + "Err").innerHTML = "&nbsp;<img src='icons/valid.ico' height='20px' width='20px'>";
+            return true;
+        } else {
+            if (valor.length > 0 && !correcto) {
+                elemento.style.border = "2px solid red";
+                document.getElementById(elemento.id + "Err").innerHTML = errorMsg[elemento.id];
+                return false;                
+            }
+            elemento.style.border = "2px solid green";
+            document.getElementById(elemento.id + "Err").innerHTML = "&nbsp;<img src='icons/valid.ico' height='20px' width='20px'>";
+            return true;      
+        }
     }
 }
-
 function comprobarSexo() {
     var sexo = document.getElementsByName("sexo");
     var checked = false;
     for (var i = 0; i < sexo.length; i++) {
         if (sexo[i].checked) {
             checked = true;
-            console.log(sexo[i].value);
         }
     }
     if (!checked) {
        document.getElementById("sexoErr").innerHTML = "Debe seleccionar una de las opciones";
        return false;
     }
+    document.getElementById("sexoErr").innerHTML = "&nbsp;<img src='icons/valid.ico' height='20px' width='20px'>";
     return true;
 }
 
@@ -73,6 +85,7 @@ function comprobarCondiciones() {
        document.getElementById("condicionesErr").innerHTML = "Debe aceptar las condiciones de uso para continuar"; 
        return false; 
     }
+    document.getElementById("condicionesErr").innerHTML = "&nbsp;<img src='icons/valid.ico' height='20px' width='20px'>";
     return true;
 }
 
@@ -87,11 +100,39 @@ function cargarEventosBlur() {
 }
 
 function validarFormulario() {
+    var camposValidados = [];
+    camposValidados.push(validar("nombre"));
+    camposValidados.push(validar("correo"));
+    camposValidados.push(validar("dni"));
+    camposValidados.push(validar("telefono"));
+    camposValidados.push(validar("tarjeta"));
+    camposValidados.push(validar("web"));
+    camposValidados.push(validar("fecha"));
+    camposValidados.push(comprobarSexo());
+    camposValidados.push(comprobarCondiciones());
     
+    var validado = true;
+
+    for (var i = 0; i < camposValidados.length; i++) {
+        if (!camposValidados[i]) {
+            validado = false;
+            if(campos[i] != undefined) {
+               document.getElementById(campos[i]).focus(); 
+            }
+            break;
+        }
+    }
+
+    if (!validado) {
+        return false;
+    }
+
+    return true;
 }
 
 function cargarEventoSubmit() {
-    document.getElementById("enviar").addEventListener('submit', validarFormulario, false);
+    document.forms[0].onsubmit = validarFormulario;
+    //document.forms[0].addEventListener('submit', validarFormulario, false);
 }
 
  window.onload = function () {

@@ -24,60 +24,66 @@
 	span {
 		color: red;
 	}
+
+	img {
+		position: absolute;
+	}
+
+
 	</style>
 </head>
 <body>
 <div id="contenedor">
 	<h2>Rellene el siguiente formulario</h2>
-	<form>
-<p class="bloque">
-		<label for="nombre">Nombre (*)</label>
-		<input type="text" id="nombre" class="required"/>	
-		<span id="nombreErr"></span>
-	</p>
-	<p class="bloque">
-		<label for="correo">Dirección de correo (*)</label>
-		<input type="text" id="correo" class="required"/>
-		<span id="correoErr"></span>	
-	</p>
-	<p class="bloque">
-		<label for="dni">DNI (*)</label>
-		<input type="text" id="dni" class="required"/>
-		<span id="dniErr"></span>
-	</p>
-	<p class="bloque">
-		<label for="telefono">Teléfono</label>
-		<input type="text" id="telefono"/>
-		<span id="telefonoErr"></span>
-	</p>
-	<p class="bloque">
-		<label for="tarjeta">Tarjeta de crédito (*)</label>
-		<input type="text" id="tarjeta" placeholder="Visa/Mastercard/American Express" class="required"/>
-		<span id="tarjetaErr"></span>
-	</p>
-	<p class="bloque">
-		<label for="web">URL Sitio Web</label>
-		<input type="text" id="web" />
-		<span id="webErr"></span>
-	</p>
-	<p class="bloque">
-		<label for="fecha">Fecha (*)</label>
-		<input type="text" id="fecha" placeholder="dd/mm/yyyy" class="required" />
-		<span id="fechaErr"></span>
-	</p>
-	<p class="bloque">
-		<label>Sexo (*)</label>
-		<input type="radio" name="sexo" value="Hombre" checked/>
-		Hombre
-		<input type="radio" name="sexo" value="Mujer" />
-		Mujer
-		<span id="sexoErr"></span>
-	</p>
-	<p class="bloque">
-		<input type="checkbox" id="condiciones" /> Acepto las condiciones.
-		<span id="condicionesErr"></span>
-	</p>
-	<input id="enviar" value="Enviar" type="submit" />
+	<form action="validado.html" method="POST" id="datos">
+		<p class="bloque">
+			<label for="nombre">Nombre (*)</label>
+			<input type="text" id="nombre" class="required"/>	
+			<span id="nombreErr"></span>
+		</p>
+		<p class="bloque">
+			<label for="correo">Dirección de correo (*)</label>
+			<input type="text" id="correo" class="required"/>
+			<span id="correoErr"></span>	
+		</p>
+		<p class="bloque">
+			<label for="dni">DNI (*)</label>
+			<input type="text" id="dni" class="required" placeholder="00000000A"/>
+			<span id="dniErr"></span>
+		</p>
+		<p class="bloque">
+			<label for="telefono">Teléfono</label>
+			<input type="text" id="telefono"/>
+			<span id="telefonoErr"></span>
+		</p>
+		<p class="bloque">
+			<label for="tarjeta">Tarjeta de crédito</label>
+			<input type="text" id="tarjeta"/>
+			<span id="tarjetaErr"></span>
+		</p>
+		<p class="bloque">
+			<label for="web">URL Sitio Web</label>
+			<input type="text" id="web" />
+			<span id="webErr"></span>
+		</p>
+		<p class="bloque">
+			<label for="fecha">Fecha (*)</label>
+			<input type="text" id="fecha" placeholder="dd/mm/yyyy" class="required" />
+			<span id="fechaErr"></span>
+		</p>
+		<p class="bloque">
+			<label>Sexo (*)</label>
+			<input type="radio" name="sexo" value="Hombre" checked/>
+			Hombre
+			<input type="radio" name="sexo" value="Mujer" />
+			Mujer
+			<span id="sexoErr"></span>
+		</p>
+		<p class="bloque">
+			<input type="checkbox" id="condiciones" /> Acepto las condiciones.
+			<span id="condicionesErr"></span>
+		</p>
+		<input id="enviar" value="Enviar" type="submit" />
 	</form>
 </div>
 </body>
