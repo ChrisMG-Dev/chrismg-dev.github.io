@@ -4,9 +4,10 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Validación Formulario</title>
+	<script type="text/javascript" src="js/validacion.js"></script>
 	<style>
 	#contenedor {
-		width: 500px;
+		width: 960px;
 		margin: 0 auto;
 	}
 
@@ -16,37 +17,43 @@
 		vertical-align:top;
 	}
 
-	textarea {
-		text-align:justify;
+	input[type=text] {
+		width: 220px;
+	}
+
+	span {
+		color: red;
 	}
 	</style>
 </head>
 <body>
 <div id="contenedor">
-	<p class="bloque">
-		<label for="nombre">Nombre completo</label>
-		<input type="text" id="nombre" />	
+	<h2>Rellene el siguiente formulario</h2>
+	<form>
+<p class="bloque">
+		<label for="nombre">Nombre (*)</label>
+		<input type="text" id="nombre" class="required"/>	
 		<span id="nombreErr"></span>
 	</p>
 	<p class="bloque">
-		<label for="correo">Dirección de correo</label>
-		<input type="text" id="correo" />
+		<label for="correo">Dirección de correo (*)</label>
+		<input type="text" id="correo" class="required"/>
 		<span id="correoErr"></span>	
 	</p>
 	<p class="bloque">
-		<label for="dni">DNI</label>
-		<input type="text" id="dni" />
+		<label for="dni">DNI (*)</label>
+		<input type="text" id="dni" class="required"/>
 		<span id="dniErr"></span>
 	</p>
 	<p class="bloque">
 		<label for="telefono">Teléfono</label>
-		<input type="text" id="telefono" />
+		<input type="text" id="telefono"/>
 		<span id="telefonoErr"></span>
 	</p>
 	<p class="bloque">
-		<label for="cuenta">Cuenta Corriente</label>
-		<input type="text" id="cuenta" />
-		<span id="cuentaErr"></span>
+		<label for="tarjeta">Tarjeta de crédito (*)</label>
+		<input type="text" id="tarjeta" placeholder="Visa/Mastercard/American Express" class="required"/>
+		<span id="tarjetaErr"></span>
 	</p>
 	<p class="bloque">
 		<label for="web">URL Sitio Web</label>
@@ -54,29 +61,24 @@
 		<span id="webErr"></span>
 	</p>
 	<p class="bloque">
-		<label for="fecha">Fecha</label>
-		<input type="text" id="fecha" />
+		<label for="fecha">Fecha (*)</label>
+		<input type="text" id="fecha" placeholder="dd/mm/yyyy" class="required" />
 		<span id="fechaErr"></span>
 	</p>
 	<p class="bloque">
-		<label>Sexo</label>
-		<input type="radio" name="sexo" value="Hombre" />
+		<label>Sexo (*)</label>
+		<input type="radio" name="sexo" value="Hombre" checked/>
 		Hombre
 		<input type="radio" name="sexo" value="Mujer" />
 		Mujer
 		<span id="sexoErr"></span>
 	</p>
-	<hr>
 	<p class="bloque">
-		<label>Condiciones de uso</label>
-		<textarea name="condiciones" cols="50" rows="20">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eum totam eaque, doloremque pariatur fugiat, repellendus obcaecati amet deserunt blanditiis veniam quis velit alias in magnam explicabo est dicta quas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi a nihil eum id reprehenderit quibusdam aspernatur aliquam itaque qui minus excepturi, illum quasi. Quidem, dolorem architecto doloremque iure numquam, dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A illum alias cumque odit porro atque quod consectetur veniam ipsa, voluptas dolorum repellendus eveniet dolores error eaque beatae voluptatum! Tempore quos quia quas nesciunt, architecto ducimus, cupiditate officia pariatur! Expedita quae aperiam, saepe assumenda quam adipisci quos dicta sint omnis ipsam ab laboriosam fuga illo cum. Libero similique placeat labore obcaecati cupiditate earum nemo, culpa omnis non nisi, aut voluptatem distinctio dolore fugiat, tenetur! Architecto rem cum facilis illo autem velit obcaecati omnis corporis, dolores assumenda labore laborum dolorum ducimus veniam repellendus consequuntur voluptatum nam atque. Doloribus repellendus iure impedit exercitationem, sequi totam laudantium quos deserunt accusantium alias vel beatae nostrum dicta dolorem culpa, rem error nesciunt tenetur velit tempora aliquam! Laboriosam, ratione, repudiandae.
-		</textarea>
-	</p>
-	<p class="bloque">
-		<input type="checkbox" id="aceptar" /> Acepto las condiciones.
+		<input type="checkbox" id="condiciones" /> Acepto las condiciones.
 		<span id="condicionesErr"></span>
-	</p>	
+	</p>
+	<input id="enviar" value="Enviar" type="submit" />
+	</form>
 </div>
 </body>
 </html>
