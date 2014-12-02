@@ -76,7 +76,7 @@ function muestraGato() {
    		+ "    <title>" + gato.nombre + "</title>"
 	    + "    <link rel='stylesheet' href='css/migato.css'>"
 	    + "    <script type='text/javascript' src='js/migato.js'></script>"
-      + "    <!--<script type='text/javascript' src='js/gato.js'></script>-->"
+      + "    <script type='text/javascript' src='js/gato.js'></script>"
    		+ "</head>"
    		+ "<body>"
    		+ "    <div id='contenedor'>"
