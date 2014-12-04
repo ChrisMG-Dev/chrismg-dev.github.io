@@ -89,16 +89,6 @@ function comprobarCondiciones() {
     return true;
 }
 
-function cargarEventosBlur() {
-    document.getElementById("nombre").addEventListener('blur', function(){validar("nombre")}, false);
-    document.getElementById("correo").addEventListener('blur', function(){validar("correo")}, false);
-    document.getElementById("dni").addEventListener('blur', function(){validar("dni")}, false);
-    document.getElementById("telefono").addEventListener('blur', function(){validar("telefono")}, false);
-    document.getElementById("tarjeta").addEventListener('blur', function(){validar("tarjeta")}, false);
-    document.getElementById("web").addEventListener('blur', function(){validar("web")}, false);
-    document.getElementById("fecha").addEventListener('blur', function(){validar("fecha")}, false);
-}
-
 function validarFormulario() {
     var camposValidados = [];
     camposValidados.push(validar("nombre"));
@@ -132,30 +122,18 @@ function validarFormulario() {
 
 function cargarEventoSubmit() {
     document.forms[0].onsubmit = validarFormulario;
-    //document.forms[0].addEventListener('submit', validarFormulario, false);
 }
 
+function cargarEventosBlur() {
+    document.getElementById("nombre").addEventListener('blur', function(){validar("nombre")}, false);
+    document.getElementById("correo").addEventListener('blur', function(){validar("correo")}, false);
+    document.getElementById("dni").addEventListener('blur', function(){validar("dni")}, false);
+    document.getElementById("telefono").addEventListener('blur', function(){validar("telefono")}, false);
+    document.getElementById("tarjeta").addEventListener('blur', function(){validar("tarjeta")}, false);
+    document.getElementById("web").addEventListener('blur', function(){validar("web")}, false);
+    document.getElementById("fecha").addEventListener('blur', function(){validar("fecha")}, false);
+}
  window.onload = function () {
     cargarEventosBlur();
     cargarEventoSubmit();
  };
-
- /*
- function validarDNI(elemento) {
-    var letras = "TRWAGMYFPDXBNJZSQVHLCKET";
-    var elemento = document.getElementById(elemento);
-    var valor = elemento.value;
-
-    var dni = parseInt(valor.substr(0, valor.length - 1).toUpperCase());
-    var resto = dni % 23;
-    var correcto = valor.charAt(valor.length - 1) == letras.charAt(resto);
-
-    if (valor.length < 9 || valor == null || !correcto) {
-        elemento.style.border = "2px solid red";
-        elemento.placeholder = "Llene este campo";
-    }
-    else {
-        elemento.style.border = "2px solid green";
-    }
- }
- */

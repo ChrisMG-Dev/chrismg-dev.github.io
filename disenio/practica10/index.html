@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Muñoz Godenir Christopher</title>
+	<script type="text/javascript" src="js/canvas.js"></script>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/blog-theme.css">
+</head>
+<body>	
+<div id="container">
+	<header>
+		<h1>Aleación tecnológica</h1>
+		<nav>
+			<ul>
+				<li class='light-grey'><a href="#">Foro</a></li>
+				<li class='grey'><a href="formulario.html">Contacto</a></li>
+				<li class='strong-grey'><a href="#">Tutoriales</a></li>
+				<li class='stronger-grey active'><a href="#">Inicio</a></li>
+			</ul>
+		</nav>
+		<img src="img/pictures/metal.jpg" alt="Logotipo de la página" />
+	</header>
+	<div id="content">
+		<div id="center-page">
+			<main>
+				<section>
+					<article>
+						<h3>PHP5</h3>
+						<div class="art-content">
+							<p>PHP es un lenguaje de programación de uso general de código del lado del servidor originalmente diseñado para el desarrollo web de contenido dinámico.</p><p>Fue uno de los primeros lenguajes de programación del lado del servidor que se podían incorporar directamente en el documento HTML en lugar de llamar a un archivo externo que procese los datos.</p><p> El código es interpretado por un servidor web con un módulo de procesador de PHP que genera la página Web resultante.</p><p> PHP ha evolucionado por lo que ahora incluye también una interfaz de línea de comandos que puede ser usada en aplicaciones gráficas independientes.</p><p> Puede ser usado en la mayoría de los servidores web al igual que en casi todos los sistemas operativos y plataformas sin ningún costo...</p>
+						</div>
+						<div class="comments"><span class="number">51</span>
+						<svg class="icon-bubble"><use xlink:href="#icon-bubble"></use></svg>
+						<span class="fecha">13-10-2014</span>
+						</div>		
+					</article>
+					<article>
+					<h3>¿Tenemos que temer a la inteligencia artificial?</h3>
+						<div class="art-content">
+							<p>El físico británico Stephen Hawking alertó de que los esfuerzos por crear una inteligencia artificial avanzada pueden poner en peligro la supervivencia de los seres humanos.</p>
+
+							<p>Para el científico, de 72 años, los avances en ese campo podrían significar "el fin de la raza humana" si los sistemas artificiales llegaran a superar en inteligencia a las personas...</p>
+						</div>
+						<div class="comments"><span class="number">23</span>
+						<svg class="icon-bubble"><use xlink:href="#icon-bubble"></use></svg>
+						<span class="fecha">13-10-2014</span>
+						</div>
+					</article>
+				</section>
+			</main>
+			<aside>
+				<div id="about-me" itemscope itemtype="http://data-vocabulary.org/Persona">
+					<img src="img/pictures/yo.jpg" />
+					<p>
+					<span itemprop="name"><h3>Christopher Muñoz</h3></span><span itemprop="title">Desarrollador de aplicaciones web</span> y <span itemprop="title">técnico de sistemas microinformáticos y redes.</span><br /><br />
+					<span itemprop="contact"><b>chrismgdaw.gmail.com</b></span>
+					</p>
+				</div>
+				<div id="social-media">
+					<div class="social">
+						<a href="#"><img src="img/pictures/twitter.png"></a>
+					</div>
+					<div class="social">
+						<a href="#"><img src="img/pictures/facebook.png"></a>
+					</div>
+					<div class="social">
+						<a href="http://www.alpha-developer.blogspot.com.es/" target="_blank"><img src="img/pictures/blog.png"></a>	
+					</div>
+					<div class="social">
+						<a href="https://github.com/ChrisMG-Dev" target="_blank"><img src="img/pictures/github.png"></a>	
+					</div>
+					<div class="social">
+						<a href="#"><img src="img/pictures/youtube.png"></a>	
+					</div>
+				</div>
+				<div id="poll">
+					<span class="title">¿Le gusta el nuevo aspecto del blog?</span>
+					<div class="option"><input type="radio" name="pollAnswer" value="3" /><span class="pollOptionText">Me gusta mucho</span></div>
+					<div class="option"><input type="radio" name="pollAnswer" value="2" /><span class="pollOptionText">Está bien</span></div>
+					<div class="option"><input type="radio" name="pollAnswer" value="1" /><span class="pollOptionText">Me da igual</span></div>
+					<div class="option"><input type="radio" name="pollAnswer" value="0" /><span class="pollOptionText">No me gusta :(</span></div>
+					<input type="button" value="Enviar" class="button"/>
+				</div>
+			</aside>
+		<div>
+		<footer>
+			<canvas id="fig"></canvas>
+			<p>@ Aleación tecnológica 2014</p>
+		</footer>
+	</div>
+</div>
+</body>
+</html>
+<!-- No se como utilizarlo fuera de un html... -->
+<svg display="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<symbol id="icon-bubble" viewBox="0 0 1024 1024">
+			<title>bubble</title>
+			<path class="path1" d="M512 192c-54.932 0-107.988 8.662-157.694 25.742-46.712 16.054-88.306 38.744-123.628 67.444-66.214 53.798-102.678 122.984-102.678 194.814 0 40.298 11.188 79.378 33.252 116.152 22.752 37.92 56.982 72.586 98.988 100.252 30.356 19.992 50.78 51.948 56.176 87.894 1.8 11.984 2.928 24.088 3.37 36.124 7.47-6.194 14.75-12.846 21.88-19.976 24.154-24.152 56.78-37.49 90.502-37.49 5.368 0 10.762 0.336 16.156 1.024 20.974 2.666 42.398 4.020 63.676 4.020 54.934 0 107.988-8.66 157.694-25.742 46.712-16.054 88.306-38.744 123.628-67.444 66.214-53.796 102.678-122.984 102.678-194.814s-36.464-141.016-102.678-194.814c-35.322-28.698-76.916-51.39-123.628-67.444-49.706-17.080-102.76-25.742-157.694-25.742zM512 64v0c282.77 0 512 186.25 512 416 0 229.752-229.23 416-512 416-27.156 0-53.81-1.734-79.824-5.044-109.978 109.978-241.25 129.7-368.176 132.596v-26.916c68.536-33.578 128-94.74 128-164.636 0-9.754-0.758-19.33-2.164-28.696-115.796-76.264-189.836-192.754-189.836-323.304 0-229.75 229.23-416 512-416z">
+			</path>
+		</symbol>
+	</defs>
+</svg>

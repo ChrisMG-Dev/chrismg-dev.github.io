@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="945px" height="1063px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 945 1063.13"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ version="1.1"
+ xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#B2B3B3;stroke-width:0.900112}
+    .fil0 {fill:#777777}
+   ]]>
+  </style>
+ </defs>
+ <g id="Vrstva_x0020_1">
+  <path class="fil0 str0" d="M472.5 195.59l293.567 0 -2.80665 31.4862 -5.34634 59.4937 -2.35305 26.3785 -0.379181 0 -282.681 0 -0.407531 0 -165.61 0 10.7269 120.173 154.883 0 0.407531 0 240.758 0 31.6221 0 -2.86099 31.5122 -27.5798 308.956 -1.76124 19.8226 -240.178 66.567 0 0.0177187 -0.543375 0.1512 -240.388 -66.7359 -16.443 -184.258 54.2973 0 63.5064 0 8.35734 93.5928 130.698 35.2946 0.107494 -0.0295312 0 -0.014175 0.407531 -0.101588 130.481 -35.2272 13.6198 -152.198 -144.101 0 -0.407531 0 -262.209 0 -28.8438 -323.394 -2.81019 -31.4862 293.863 0 0.407531 0zm-468.706 -195.59l85.3111 956.855 382.821 106.27 383.88 -106.424 85.3985 -956.701 -937.41 0z"/>
+ </g>
+</svg>

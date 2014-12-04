@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Muñoz Godenir Christopher</title>
+	<script type="text/javascript" src="js/canvas.js"></script>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/blog-theme.css">
+</head>
+<body>
+<div id="container">
+	<header>
+		<h1>Aleación tecnológica</h1>
+		<nav>
+			<ul>
+				<li class='light-grey'><a href="#">Foro</a></li>
+				<li class='grey active'><a href="#">Contacto</a></li>
+				<li class='strong-grey'><a href="#">Tutoriales</a></li>
+				<li class='stronger-grey'><a href="index.html">Inicio</a></li>
+			</ul>
+		</nav>
+		<img src="img/pictures/metal.jpg" alt="Logotipo de la página" />
+	</header>
+	<div id="content">
+		<div id="center-page">
+			<main>
+				<section>
+				<div class="formContainer">
+					<form action="#" method="post">
+						<p class="bloque">
+							<label>Nombre <span class="required">(*)</span></label>
+							<input type="text" name="nombre" required />
+						</p>
+						<p class="bloque">
+							<label>EMAIL <span class="required">(*)</span></label>
+							<input type="email" name="email" required />
+						</p>
+						<p class="bloque">
+							<label>Asunto <span class="required">(*)</span></label>
+							<input type="text" name="asunto" required />
+						</p>
+						<p class="bloque">
+							<label>Comentario</label>
+							<textarea name="comentario" rows="14" cols="50"> </textarea>
+						</p>
+						<p class="bloque">
+							<div class="buttonPanel"><input type="submit" name="enviar" value="Enviar" class="button"/></div>
+						</p>
+					</form>
+					</div>
+				</section>
+			</main>
+			<aside>
+				<div id="about-me" itemscope itemtype="http://data-vocabulary.org/Persona">
+					<img src="img/pictures/yo.jpg" />
+					<p>
+					<span itemprop="name"><h3>Christopher Muñoz</h3></span><span itemprop="title">Desarrollador de aplicaciones web</span> y <span itemprop="title">técnico de sistemas microinformáticos y redes.</span><br /><br />
+					<span itemprop="contact"><b>chrismgdaw.gmail.com</b></span>
+					</p>
+				</div>
+				<div id="social-media">
+					<div class="social">
+						<a href="#"><img src="img/pictures/twitter.png"></a>
+					</div>
+					<div class="social">
+						<a href="#"><img src="img/pictures/facebook.png"></a>
+					</div>
+					<div class="social">
+						<a href="http://www.alpha-developer.blogspot.com.es/" target="_blank"><img src="img/pictures/blog.png"></a>	
+					</div>
+					<div class="social">
+						<a href="https://github.com/ChrisMG-Dev" target="_blank"><img src="img/pictures/github.png"></a>	
+					</div>
+					<div class="social">
+						<a href="#"><img src="img/pictures/youtube.png"></a>	
+					</div>
+				</div>
+				<div id="poll">
+					<span class="title">¿Le gusta el nuevo aspecto del blog?</span>
+					<div class="option"><input type="radio" name="pollAnswer" value="3" /><span class="pollOptionText">Me gusta mucho</span></div>
+					<div class="option"><input type="radio" name="pollAnswer" value="2" /><span class="pollOptionText">Está bien</span></div>
+					<div class="option"><input type="radio" name="pollAnswer" value="1" /><span class="pollOptionText">Me da igual</span></div>
+					<div class="option"><input type="radio" name="pollAnswer" value="0" /><span class="pollOptionText">No me gusta :(</span></div>
+					<input type="button" value="Enviar" class="button"/>
+				</div>
+			</aside>
+		<div>
+		<footer>
+			<canvas id="fig"></canvas>
+			<p>@ Aleación tecnológica 2014</p>
+		</footer>
+	</div>
+</div>
+</body>
+</html>
