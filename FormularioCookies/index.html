@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Validación Formulario</title>
+	<script type="text/javascript" src="js/validacion.js"></script>
+	<style>
+	#contenedor {
+		width: 960px;
+		margin: 0 auto;
+	}
+
+	label {
+		display: inline-block;
+		width: 150px;
+		vertical-align:top;
+	}
+
+	input[type=text] {
+		width: 220px;
+	}
+
+	span {
+		color: red;
+	}
+
+	img {
+		position: absolute;
+	}
+
+
+	</style>
+</head>
+<body>
+<div id="contenedor">
+	<h2>Rellene el siguiente formulario</h2>
+	<form action="validacion.html" method="POST" id="datos">
+		<p class="bloque">
+			<label for="nombre">Nombre (*)</label>
+			<input type="text" id="nombre" class="required"/>	
+			<span id="nombreErr"></span>
+		</p>
+		<p class="bloque">
+			<label for="correo">Dirección de correo (*)</label>
+			<input type="text" id="correo" class="required"/>
+			<span id="correoErr"></span>	
+		</p>
+		<p class="bloque">
+			<label for="dni">DNI (*)</label>
+			<input type="text" id="dni" class="required" placeholder="00000000A"/>
+			<span id="dniErr"></span>
+		</p>
+		<p class="bloque">
+			<label for="telefono">Teléfono</label>
+			<input type="text" id="telefono"/>
+			<span id="telefonoErr"></span>
+		</p>
+		<p class="bloque">
+			<label for="tarjeta">Tarjeta de crédito</label>
+			<input type="text" id="tarjeta"/>
+			<span id="tarjetaErr"></span>
+		</p>
+		<p class="bloque">
+			<label for="web">URL Sitio Web</label>
+			<input type="text" id="web" />
+			<span id="webErr"></span>
+		</p>
+		<p class="bloque">
+			<label for="fecha">Fecha (*)</label>
+			<input type="text" id="fecha" placeholder="dd/mm/yyyy" class="required" />
+			<span id="fechaErr"></span>
+		</p>
+		<p class="bloque">
+			<label>Sexo (*)</label>
+			<input type="radio" name="sexo" value="Hombre" checked/>
+			Hombre
+			<input type="radio" name="sexo" value="Mujer" />
+			Mujer
+			<span id="sexoErr"></span>
+		</p>
+		<p class="bloque">
+			<input type="checkbox" id="condiciones" /> Acepto las condiciones.
+			<span id="condicionesErr"></span>
+		</p>
+		<input id="enviar" value="Enviar" type="submit" />
+	</form>
+	<br />
+	<input type="button" id="verCookie" value="Ver cookie" />
+</div>
+</body>
+</html>
