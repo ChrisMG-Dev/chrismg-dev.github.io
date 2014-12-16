@@ -1,0 +1,42 @@
+@import url(gestor.css);
+
+button {
+	background: transparent;
+	border: none ;
+	font-size:0; }
+ 
+	button img {
+		height: 25px;
+		width: 35px; }
+ 
+ 
+.controlPanel {
+	display: block;
+	margin: 0 auto;
+	width: 19%; }
+ 
+ 
+form {
+	display: table;
+	margin: 0 auto; }
+ 
+	form label {
+		display: inline-block;
+		vertical-align: top;
+		width: 160px; }
+ 
+	form input:invalid { background-color: #ED9797; }
+ 
+	form .separator { margin-bottom: 15px; }
+ 
+ 
+		form input:required:valid { background-color: #B0DD86; }
+ 
+ 
+#formPage {
+	background-color: #D5E6E8;
+	margin: 15px;
+	padding: 25px; }
+ 
+ 
+main { width: 100%; }
