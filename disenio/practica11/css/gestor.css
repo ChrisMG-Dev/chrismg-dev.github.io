@@ -61,6 +61,11 @@ h4 img {
 h5 {
 	display: inline-block;
 	margin-top: 0px; }
+
+h5 a {
+	text-decoration: none;
+	color: inherit;
+}
  
 .homeworkList {
 	-moz-border-radius: 12px;
@@ -298,13 +303,35 @@ span.deadLineSoon {
 	font-weight: bold; }
  
  
-.filter li {
+li .filter li {
+	position: relative;
 	border-bottom: 1px dashed black;
 	font-size: 14px;
-	padding: 4px 0; }
+	padding: 4px 0;
+	-webkit-transition-property: -webkit-transform;
+	   -moz-transition-property: -moz-transform;
+	     -o-transition-property: -o-transform;
+	        transition-property: transform;
+    -webkit-transition-duration: 0.2s;
+       -moz-transition-duration: 0.2s;
+         -o-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+    -webkit-transition-timing-function: linear;
+       -moz-transition-timing-function: linear;
+         -o-transition-timing-function: linear;
+            transition-timing-function: linear; 
+}
 
 .filter li:hover {
 	color: black;
+ }
+
+ li:hover .filter li{
+	-webkit-transform: translateX(-7px);
+	   -moz-transform: translateX(-7px);
+	    -ms-transform: translateX(-7px);
+	     -o-transform: translateX(-7px);
+	        transform: translateX(-7px);
  }
 
  .filter li:hover input {
