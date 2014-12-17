@@ -58,6 +58,11 @@ h4 img {
 	top: 6px;
 }
 
+h1 a {
+	text-decoration: none;
+	color: inherit;
+}
+
 h5 {
 	display: inline-block;
 	margin-top: 0px; }
@@ -93,6 +98,7 @@ h5 a {
  }
 #container {
 	background-color: #136466;
+	border-radius: 8px;
 	font-family: "Open Sans";
 	margin: 0 auto 10px auto;
 	max-width: 1660px;
@@ -128,6 +134,7 @@ h5 a {
  
 footer {
 	background: linear-gradient(#136466, #9A3334);
+	border-radius: 8px;
 	display: inline-block;
 	font-size: 21px;
 	height: 150px;
