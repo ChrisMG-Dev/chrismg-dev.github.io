@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Christopher Muñoz Godenir</title>
+	<script type="text/javascript" src="js/uni.js"></script>
+	<style>
+		label {
+			display: inline-block;
+			width: 160px;
+		}
+
+		#errorBox {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<h5>Alta del universitario</h5>
+	<form>
+		<div>
+			<label for="tNombre">Nombre</label>
+			<input type="text" id="tNombre" />
+		</div>
+		<div>
+			<label for="tPrimer">Primer apellido</label>
+			<input type="text" id="tPrimer" />
+		</div>
+		<div>
+			<label for="tSegundo">Segundo apellido</label>
+			<input type="text" id="tSegundo" />
+		</div>
+		<div>
+			<label for="tFechaNac">Fecha de nacimiento</label>
+			<input type="text" id="tFechaNac" />
+		</div>
+		<div id="condic">
+			<input type="checkbox" id="aceptar">Acepto las condiciones
+		</div>
+		<div id="formBtnPanel">
+			<input type="button" id="crear" value="Crear">
+			<input type="reset" id="limpiar" value="Limpiar">
+		</div>
+	</form>
+	<br />
+	<div id="errorBox"><div>
+</body>
+</html>
