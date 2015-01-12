@@ -14,7 +14,7 @@ var regexp = {
     "dni" : "^(([X-Z]{1})([-]?)(\\d{7})([-]?)([A-Z]{1}))|((\\d{8})([-]?)([A-Z]{1}))$",
     "telefono" : "^[9|6]{1}(\\d{2}-?){3}\\d{2}$",
     "tarjeta" : "^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13})$",
-    "web" : "^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$",
+    "web" : "^(http[s]?:\\/\\/(www\\.)?|ftp:\\/\\/(www\\.)?|www\\.){1}([0-9A-Za-z-\\.@:%_\+~#=]+)+((\\.[a-zA-Z]{2,3})+)(/(.)*)?(\\?(.)*)?",
     "fecha" : "^(?:(?:31(\\/|-|\\.)(?:0?[13578]|1[02]))\\1|(?:(?:29|30)(\\/|-|\\.)(?:0?[1,3-9]|1[0-2])\\2))(?:(?:1[6-9]|[2-9]\\d)?\\d{2})$|^(?:29(\\/|-|\\.)0?2\\3(?:(?:(?:1[6-9]|[2-9]\\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\\d|2[0-8])(\\/|-|\\.)(?:(?:0?[1-9])|(?:1[0-2]))\\4(?:(?:1[6-9]|[2-9]\\d)?\\d{2})$",
 },
 // Mensajes de error de validación de campos
@@ -88,6 +88,26 @@ function comprobarCondiciones() {
     document.getElementById("condicionesErr").innerHTML = "&nbsp;<img src='icons/valid.ico' height='20px' width='20px'>";
     return true;
 }
+/*
+function validarDni() {
+
+    var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+    letra = letra.toUpperCase();
+     
+    if(numero < 0 || numero > 99999999) {
+      alert("El número proporcionado no es válido");
+    }
+    else {
+      var letraCalculada = letras[numero % 23];
+      if(letraCalculada != letra) {
+        alert("La letra o el número proporcionados no son correctos");
+      }
+      else {
+        alert("El número de DNI y su letra son correctos");
+      }
+    }
+}
+*/
 
 function validarFormulario() {
     var camposValidados = [];
