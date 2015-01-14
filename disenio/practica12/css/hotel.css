@@ -1,0 +1,109 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,700,400);
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#container {
+	min-width: 300px;
+	margin: 0 auto;
+	padding: 0 10px 0 10px;
+	font-family: "Roboto";
+	font-size: 14px;
+}
+
+header ul li {
+	display: inline-block;
+	text-decoration: none;
+}
+
+header h1 {
+	display: inline-block;
+	margin: 15px 5px 5px 5px;
+}
+
+header nav {
+	text-align: center;
+	width: 0 auto;
+}
+
+header nav ul {
+	display: block;
+	padding: 0;
+	width: 0 auto;
+}
+
+#languageBar {
+	float: right;
+	padding-top: 15px;
+	padding-right: 30px;
+}
+
+#languageBar ul {
+	padding: 0;
+}
+
+#searchBar {
+	text-align: center;
+}
+
+.imgHolder {
+	display: inline-block;
+	border: 1px solid black;
+	height: 120px;
+	width: 120px;
+	text-align: center;
+	width: 0 auto;
+}
+
+section {
+	padding-top: 20px;
+}
+
+article {
+	width: 42%;
+	display: inline-block;
+	padding: 10px;
+	border: 1px solid black;
+}
+
+article:nth-child(even) {float: right;}
+article:nth-child(odd) {float: left;}
+
+article h3 {
+	margin: 0px;
+	text-align: center;
+}
+
+.hotelPreview {
+	text-align: center;
+}
+
+.hotelData {
+}
+
+.hotelData span {
+	font-size: 12px;
+	text-align: left;
+	display: block;
+	*padding-left: 24px;
+	text-align: center;
+}
+
+footer {
+	padding: 2px 10px 0px 2px;
+	text-align: center;
+	clear: both;
+}
+
+#socialBar {
+	text-align: center;
+}
+
+.socialIcon {
+	border: 1px solid black;
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+	margin-right: 8px;
+}
