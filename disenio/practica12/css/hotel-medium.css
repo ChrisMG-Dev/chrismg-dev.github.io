@@ -7,7 +7,7 @@
 #container {
 	min-width: 320px;
 	margin: 0 auto;
-	padding: 0 10px 0 10px;
+	*padding: 0 10px 0 10px;
 	font-family: "Roboto";
 	font-size: 14px;
 }
@@ -56,9 +56,6 @@ header nav ul {
 	width: 0 auto;
 }
 
-.imgHolder img {
-}
-
 section {
 	padding-top: 20px;
 }
@@ -67,6 +64,7 @@ article {
 	width: 42%;
 	display: inline-block;
 	padding: 10px;
+	margin: 5px 1px 5px 1px;
 	border: 1px solid black;
 }
 

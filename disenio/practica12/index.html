@@ -5,32 +5,38 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<title>Muñoz Godenir Christopher</title>
-	<link rel="stylesheet" href="css/hotel.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" media="(max-width: 570px)" href="css/hotel-small.css">
+	<link rel="stylesheet" media="(min-width: 920px)" href="css/hotel-medium.css">
 </head>
 <body>
 	<div id="container">
 		<header>
-			<h1>Hotel</h1>
+			<h1>El caminito</h1>
 			<div id="languageBar">
 				<ul>
-					<li>English</li>
-					<li>Français</li>
-					<li>Español</li>
+					<li><a href="#">English</a></li>
+					<li><a href="#">Français</a></li>
+					<li><a href="#">Español</a></li>
 				</ul>
 			</div>
 			<nav>
 				<ul>
-					<li>Link 1</li>
-					<li>Link 2</li>
-					<li>Link 3</li>
-					<li>Link 4</li>
-					<li>Link 5</li>
+					<li><a href="#">Inicio</a></li>
+					<li><a href="#">Búsqueda</a></li>
+					<li><a href="#">Ofertas</a></li>
+					<li><a href="#">Contacto</a></li>
 				</ul>
 			</nav>
 		</header>
 		<main>
-			<div id="searchBar">
-				<input type="text" placeholder="placeholder">
+			<div id="searchPanel">
+				<div id="lupa">
+					<object id="twitter" data="img/icons/zoom.svg" type="image/svg+xml"></object>
+				</div>
+				<div id="searchBar">
+					<input type="text" placeholder="Provincia, Ciudad...">
+				</div>				
 			</div>
 			<section>
 				<article>
@@ -38,7 +44,7 @@
 					<h3>Casa rural</h3>
 					<h3>Málaga</h3>
 					<div class="imgHolder">
-						&nbsp;
+						<img src="img/casas/casa1.jpg" height="116px" width="116px" alt="">
 					</div>
 					<div class="hotelData">
 						<span class="rooms">Habitaciones: 2</span>
@@ -48,11 +54,11 @@
 				</div>
 				</article>
 				<article>
-									<div class="hotelPreview">
+					<div class="hotelPreview">
 					<h3>Casa rural</h3>
 					<h3>Málaga</h3>
 					<div class="imgHolder">
-						&nbsp;
+						<img src="img/casas/casa2.jpg" height="116px" width="116px" alt="">
 					</div>
 					<div class="hotelData">
 						<span class="rooms">Habitaciones: 2</span>
@@ -62,11 +68,11 @@
 				</div>
 				</article>
 				<article>
-									<div class="hotelPreview">
+					<div class="hotelPreview">
 					<h3>Casa rural</h3>
 					<h3>Málaga</h3>
 					<div class="imgHolder">
-						&nbsp;
+						<img src="img/casas/casa3.jpg" height="116px" width="116px" alt="">
 					</div>
 					<div class="hotelData">
 						<span class="rooms">Habitaciones: 2</span>
@@ -76,11 +82,11 @@
 				</div>
 				</article>
 				<article>
-									<div class="hotelPreview">
+					<div class="hotelPreview">
 					<h3>Casa rural</h3>
 					<h3>Málaga</h3>
 					<div class="imgHolder">
-						&nbsp;
+						<img src="img/casas/casa4.jpg" height="116px" width="116px" alt="">
 					</div>
 					<div class="hotelData">
 						<span class="rooms">Habitaciones: 2</span>
@@ -97,9 +103,9 @@
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero aliquam, alias, at animi nam eligendi consectetur modi reiciendis.
 		</p>
 		<div id="socialBar">
-			<div class="socialIcon"></div>
-			<div class="socialIcon"></div>
-			<div class="socialIcon"></div>
+			<div class="socialIcon"><object id="twitter" data="img/icons/twitter.svg" type="image/svg+xml"></object></div>
+			<div class="socialIcon"><object id="facebook" data="img/icons/facebook-square.svg" type="image/svg+xml"></object></div>
+			<div class="socialIcon"><object id="googleplus" data="img/icons/googleplus-square.svg" type="image/svg+xml"></object></div>
 		</div>
 		</footer>	
 	</div>
