@@ -14,6 +14,21 @@
 	left: 118px;
 }
 
+.arrow-right {
+	background-image: url("../img/icons/right_arrow.png");
+	background-size: 16px 16px;
+	background-repeat: no-repeat;
+	background-position: 130px;
+	-webkit-transition:background-position 0.2s ;  
+	-moz-transition:background-position 0.2s ;  
+	-o-transition:background-position 0.2s ;  
+	transition:background-position 0.2s ; 
+}
+
+.arrow-right:hover {
+	background-position: 95px;
+}
+
 #lupa {
 	display: inline-block;
 	position: relative;
@@ -62,11 +77,11 @@ header nav ul {
 }
 
 nav ul li {
-	transition: background-color 0.5s;
+	transition: background-color 0.2s;
 }
 
 nav ul li:hover {
-	background-color: brown;
+	background-color: #A8C350;
 }
 
 nav ul li a {
@@ -94,6 +109,28 @@ nav ul li a {
 #languageBar ul li a {
 	text-decoration: none;
 	color: black;
+}
+
+#languageBar ul li.flag {
+	display: inline-block;
+	position: absolute;
+	text-align: center;
+}
+
+.flag img {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	position: relative;
+	top: -18px;
+	left: -28px;
+	transition: 0.4s all;
+}
+
+.flag img:hover {
+	width: 20px;
+	height: 20px;
+	transform: rotate(-20deg);
 }
 
 #searchBar {
@@ -148,12 +185,25 @@ article h3 {
 }
 
 .hotelPreview button {
-	padding: 3px 25%;
+	padding: 3px 30px;
+	
 }
 
 .hotelPreview img {
 	width: 100%;
 	height: 100%;
+	padding: 5px;
+	border: solid 1px #CCC;
+	transition: all 0.3s;
+		-moz-box-shadow: 1px 1px 5px #999;
+	-webkit-box-shadow: 1px 1px 5px #999;
+        box-shadow: 1px 1px 5px #999;
+}
+
+.hotelPreview img:hover {
+	-moz-box-shadow: 1px 1px 5px #666;
+	-webkit-box-shadow: 1px 1px 5px #666;
+        box-shadow: 1px 1px 5px #666;
 }
 
 .hotelData {
@@ -185,16 +235,14 @@ footer {
 }
 
 .socialIcon img {
-	position: absolute;
 	margin: 2px;
 	width: 40px;
 	height: 40px;
 	border: 1px solid #A8C350;
 	border-radius: 40px;
-	transition: 0.2s all;
+	transition: 0.6s all;
 }
 
 .socialIcon img:hover {
-	border: 1px solid #686F45;
-	background-color: #686F45;
+	transform: rotate(360deg);
 }
