@@ -171,7 +171,7 @@ footer {
 	padding: 2px 10px 0px 2px;
 	text-align: center;
 	clear: both;
-	background-color: #669966;
+	background-color: #A8C350;
 }
 
 #socialBar {
@@ -185,15 +185,16 @@ footer {
 }
 
 .socialIcon img {
+	position: absolute;
+	margin: 2px;
 	width: 40px;
 	height: 40px;
-	border: 1px solid #669966;
-	padding: 8px;
+	border: 1px solid #A8C350;
 	border-radius: 40px;
-	transition: 0.6s all;
+	transition: 0.2s all;
 }
 
 .socialIcon img:hover {
-	border: 1px solid yellow;
-	background-color: yellow;
+	border: 1px solid #686F45;
+	background-color: #686F45;
 }
