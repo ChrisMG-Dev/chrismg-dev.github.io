@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejemplos de JQuery</title>
+	<script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
+	<script src="js/ejemplo1.js" type="text/javascript"></script>
+	<script src="js/ejemplo2.js" type="text/javascript"></script>
+	<script src="js/ejemplo3.js" type="text/javascript"></script>
+	<script src="js/ejemplo4.js" type="text/javascript"></script>
+	<script src="js/ejemplo5.js" type="text/javascript"></script>
+	<script src="js/ejemplo6.js" type="text/javascript"></script>
+	<script type="text/javascript" src="scripts/autoloader.js"></script>
+	<script type="text/javascript" src="scripts/shCore.js"></script>
+	<script type="text/javascript" src="scripts/shBrushJScript.js"></script>
+	<link href="css/shCore.css" rel="stylesheet" type="text/css" />
+	<link href="css/shThemeMidnight.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="enunciado">
+		Distintas formas de acceder al atributo checked. Compruébalo en las distintas plataformas, tanto con input como con radio buttons.
+		<ol>
+			<li>:selected Selector</li>
+			<li>.prop()</li>
+			<li>.attr()</li>
+			<li>:checked</li>
+			<li>.val()</li>
+		</ol>	
+	</div>
+	<div class="respuesta">
+		<h2>:selected</h2>
+		El selector <i>:selected</i> no sirve para comprobar si un un checkbox o un radiobutton está seleccionado, el selector que hay que utilizar para ese caso es <i>:checked</i>
+
+		<h2>.prop()</h2>
+		Este método recoge el valor de una propiedad, por lo que si utilizamos el siguiente codigo
+
+		<pre class="brush: js">
+			<input type="checkbox" id="acuerdo" checked="checked">
+				$(document).ready(function(){
+					console.log($("#acuerdo").prop("checked"));
+				});
+		</pre>
+
+		Resultado: true
+
+		<h2>.attr()</h2>
+		Si utilizamos <i>.attr()</i> en lugar de <i>.prop()</i> para comprobar que un textbox está seleccionado, nos devolverá checked o undefined en lugar de true o false por lo que se recomienda utilizar el método <i>.prop()</i> en versiones de JQuery superiores al 1.6.1
+		<pre class="brush: js">
+			<input type="checkbox" id="acuerdo" checked="checked">
+			<input type="checkbox" id="noticias">
+			$(document).ready(function(){
+					console.log($("#acuerdo").attr("checked"));
+					console.log($("#noticias").attr("checked"));
+			});</pre>
+
+		Resultado: <br />
+		checked <br/>
+		undefined
+
+		<h2>:checked</h2>
+
+		Es el selector que hay que utilizar para recoger aquellos elementos seleccionados.
+
+		<pre class="brush: js">
+			<input type="checkbox" id="acuerdo" checked="checked">
+			<input type="checkbox" id="noticias" checked="checked">
+			$("input:checked").each(function(i){
+				console.log($(this).attr("id"));
+			});</pre>
+
+		Resultado: <br>
+		acuerdo <br>
+		noticias <br>
+
+		<h2>.val()</h2>
+		Nos permite acceder al valor de un elemento
+
+		<pre class="brush: js">
+			<input type="radio" name="sexo" value="hombre">
+			<input type="radio" name="sexo" value="mujer" checked>
+			$(document).ready(function(){
+				console.log($("input[type=radio]:checked").val());
+			});</pre>
+
+		Resultado: <br>
+		mujer
+	</div>
+	<div id="demo_elements" style="display: none;">
+		<input type="checkbox" id="acuerdo" checked="checked">
+		<input type="checkbox" id="test" checked="checked">
+		<input type="radio" name="sexo" value="hombre" checked>
+		<input type="radio" name="sexo" value="mujer">
+	</div>
+
+	<script type="text/javascript">
+    	SyntaxHighlighter.all()
+	</script>
+</body>
+</html>
