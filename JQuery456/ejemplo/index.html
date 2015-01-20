@@ -16,6 +16,22 @@
 	<script type="text/javascript" src="scripts/shBrushJScript.js"></script>
 	<link href="css/shCore.css" rel="stylesheet" type="text/css" />
 	<link href="css/shThemeMidnight.css" rel="stylesheet" type="text/css" />
+	<script>
+	$(document).ready(function(){
+		$("input[type=checkbox]").each(function(i, v) {
+			$(this).bind("click", function(i) {
+				if ($(this).prop("checked")) {
+					var id = $(this).attr("id");
+					$("input[type=checkbox]").each(function(){
+						if ($(this).attr("id") != id) {
+							$(this).removeAttr("checked");
+						}
+					});
+				}
+			});
+		})
+	});
+	</script>
 </head>
 <body>
 	<div class="enunciado">
@@ -86,13 +102,38 @@
 		Resultado: <br>
 		mujer
 	</div>
+	<div class="enunciado">
+		<h3>De tres 'input type="checkbox"' que te deshabilite 2 al seleccionar una de ellas.</h3>
+	</div>
+	<pre class="brush: js">
+		<input type="checkbox" id="test1">
+		<input type="checkbox" id="test2">
+		<input type="checkbox" id="test3">
+
+		$(document).ready(function(){
+			$("input[type=checkbox]").each(function(i, v) {
+				$(this).bind("click", function(i) {
+					if ($(this).prop("checked")) {
+						var id = $(this).attr("id");
+						$("input[type=checkbox]").each(function(){
+							if ($(this).attr("id") != id) {
+								$(this).removeAttr("checked");
+							}
+						});
+					}
+				});
+			})
+		});
+	</pre>
+	Resultado: 	<input type="checkbox" id="test1">
+		<input type="checkbox" id="test2">
+		<input type="checkbox" id="test3"><br>
 	<div id="demo_elements" style="display: none;">
 		<input type="checkbox" id="acuerdo" checked="checked">
 		<input type="checkbox" id="test" checked="checked">
 		<input type="radio" name="sexo" value="hombre" checked>
 		<input type="radio" name="sexo" value="mujer">
 	</div>
-
 	<script type="text/javascript">
     	SyntaxHighlighter.all()
 	</script>
