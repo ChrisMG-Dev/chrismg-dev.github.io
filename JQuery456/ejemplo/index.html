@@ -16,6 +16,19 @@
 	<script type="text/javascript" src="scripts/shBrushJScript.js"></script>
 	<link href="css/shCore.css" rel="stylesheet" type="text/css" />
 	<link href="css/shThemeMidnight.css" rel="stylesheet" type="text/css" />
+	<style>
+		#alertBox {
+			display: inline-block;
+			border: 2px solid red;
+			font-weight: bold;
+			padding: 5px;
+			border-radius: 3px;
+		}
+
+		#alertBox.dentro {
+			background-color: lightblue;
+		}
+	</style>
 	<script>
 	$(document).ready(function(){
 		$("input[type=checkbox]").each(function(i, v) {
@@ -31,6 +44,75 @@
 			});
 		})
 	});
+
+	$(document).ready(function(){
+			$("#alertBox").bind("click", function(){
+				alert("Has clicado en la caja");
+			});
+		});
+
+			$(document).ready(function(){
+			$("#alertBox").bind("mouseenter mouseleave", function(){
+				$(this).toggleClass("dentro");
+			});
+		});
+		$(document).ready(function(){
+			$( "#alertBox ").bind({
+			  click: function() {
+			    $(this).html("Has hecho click");
+			  },
+			  mouseenter: function() {
+			    $(this).css("color","blue");
+			  },
+			  mouseleave: function() {
+			    $(this).css("color","red");
+			  }
+			});
+		});
+
+		$(document).ready(function(){
+			$(document).on("mousemove", function(event){
+				$("#coords").text("X: " + event.pageX + ", Y: " + event.pageY);
+			});
+		});
+
+		// currentTarget
+		$(document).ready(function(){
+			$("#coords").bind("click", function(event){
+				$(event.currentTarget).css("color", function(){
+					var num = (Math.round(Math.random() * 3 - 1) +1);
+					switch(num) {
+						case 1:
+							return "red";
+							break;
+						case 2:
+							return "blue";
+							break;
+						case 3:
+							return "green";
+							break;
+						default:
+							return "red";
+							break;
+					}
+				});
+			});
+		});
+
+		$(document).ready(function(){
+			var ultimoClick, diferencia;
+			$("#coords").click(function(event){
+				if(!ultimoClick) {
+					ultimoClick = event.timeStamp;
+					$("#timeCoords").text("Haga click de nuevo");
+				} else {
+					diferencia = event.timeStamp - ultimoClick;
+  					$("#timeCoords").text((diferencia / 1000).toFixed(1) + " segundos");
+  					ultimoClick = event.timeStamp;
+				}
+			});
+		});
+		
 	</script>
 </head>
 <body>
@@ -133,6 +215,132 @@
 		<input type="checkbox" id="test" checked="checked">
 		<input type="radio" name="sexo" value="hombre" checked>
 		<input type="radio" name="sexo" value="mujer">
+	</div>
+	<div class="enunciado">
+		Asociar dintintos eventos mediante .bind(object)
+	</div>
+	<br><br>
+	<pre class="brush: js">
+		// Bind evento click
+		$(document).ready(function(){
+			$("#alertBox").bind("click", function(){
+				alert("Has clicado en la caja");
+			});
+		});
+
+		// Bind distintos eventos
+		$(document).ready(function(){
+			$("#alertBox").bind("mouseenter mouseleave", function(){
+				$(this).toggleClass("dentro");
+			});
+		});
+
+		// Bind distintos eventos mediante un objeto
+		$(document).ready(function(){
+			$( "#alertBox ").bind({
+			  click: function() {
+			    $(this).html("Has hecho click");
+			  },
+			  mouseenter: function() {
+			    $(this).css("color","blue");
+			  },
+			  mouseleave: function() {
+			    $(this).css("color","red");
+			  }
+			});
+		});
+	</pre>
+	Resultado: <br />
+	<div id="alertBox">
+		Alert
+	</div>
+	<br><br>
+	<div class="enunciado">
+		Los atributos pageX, pageY, currentTarget, timeStamp... ¿A qué objeto pertenecen? Demuestra su uso.
+	</div>
+	<div class="respuesta">
+		Pertenecen al objeto event
+	</div>
+	<pre class="brush: js">
+		// pageX y pageY
+		$(document).ready(function(){
+			$(document).on("mousemove", function(event){
+				$("#coords").text("X: " + event.pageX + ", Y: " + event.pageY);
+			});
+		});
+
+		// currentTarget es equivalente a this
+		$(document).ready(function(){
+			$("#coords").bind("click", function(event){
+				$(event.currentTarget).css("color", function(){
+					var num = (Math.round(Math.random() * 3 - 1) +1);
+					switch(num) {
+						case 1:
+							return "red";
+							break;
+						case 2:
+							return "blue";
+							break;
+						case 3:
+							return "green";
+							break;
+						default:
+							return "red";
+							break;
+					}
+				});
+			});
+		});	
+
+		// timeStamp devuelve los milisegundos que han pasado desde enero 1970
+		$(document).ready(function(){
+			var ultimoClick, diferencia;
+			$("#coords").click(function(event){
+				if(!ultimoClick) {
+					ultimoClick = event.timeStamp;
+					$("#timeCoords").text("Haga click de nuevo");
+				} else {
+					diferencia = event.timeStamp - ultimoClick;
+  					$("#timeCoords").text((diferencia / 1000).toFixed(1) + " segundos");
+  					ultimoClick = event.timeStamp;
+				}
+			});
+		});
+
+	</pre>
+	Resultado: <br>
+	<div id="coords">Coordenadas</div><br>
+	Clicado por última vez hace: <div id="timeCoords">No ha clicado aún</div>
+	<br><br>
+	<div class="enunciado">
+		Diferencia entre .on(), .live(). bind() y .delegate()
+	</div>
+	<div class="respuesta">
+		<h3>bind()</h3>
+		<p>Este método no tiene delegación de evento, por lo que si se crea un elemento del DOM que corresponda con el selector indicado, el evento indicado no será asociado a él. Tiene también el inconveniente de que crea un evento por cada elemento seleccionado, ralentizando la página.</p>
+		<h3>live()</h3>
+		<p>Es parecido a bind salvo que podemos crear elementos posteriormente a la asignación de eventos y éstos obtendrán el evento de igual manera. Este método está obsoleto. El inconveniente es que los eventos se asocian al document por lo que no es muy eficiente.</p>
+		<h3>delegate()</h3>
+		<p>
+			Parecido a live salvo que podemos asociar el evento a un selector en lugar de asociar el selector y el evento al document.
+			<br>
+			Ejemplo:
+		</p>
+		<pre class="brush: js">
+			// Todos los enlaces dentro de un objeto de una lista del elemento nav_publicidad
+			$( "#nav_publicidad" ).delegate( "li a", "click", function( e ) {} );
+		</pre>
+		<h3>on()</h3>
+		<p>Introducida en la versión 1.7, es una opción mejor que las anteriores, ya que ofrece las ventajas de delegate y puede usarse como el bind</p><p>Ejemplo:</p>
+		<pre class="brush: js">
+			// bind vs on
+			$( "#nav_publicidad li a" ).on( "click", function( e ) {} ); 
+			$( "#nav_publicidad li a" ).bind( "click", function( e ) {} ); 
+
+			// delegate vs on
+			$( "#nav_publicidad" ).on( "click", "li a", function( e ) {} ); 
+			$( "#nav_publicidad" ).delegate( "li a", "click", function( e ) {} );
+		</pre>
 	</div>
 	<script type="text/javascript">
     	SyntaxHighlighter.all()
