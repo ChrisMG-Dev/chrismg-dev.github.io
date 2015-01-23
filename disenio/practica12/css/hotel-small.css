@@ -236,7 +236,7 @@ nav ul {
 #socialBar { text-align: center; }
  
  body {
-background: rgba(81, 141, 69, 0.5) url("http://www.transparenttextures.com/patterns/wall-4-light.png");
+background: rgba(81, 141, 69, 0.1) url("http://www.transparenttextures.com/patterns/wall-4-light.png");
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
  }
 .socialIcon {
