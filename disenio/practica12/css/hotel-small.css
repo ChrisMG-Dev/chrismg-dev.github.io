@@ -75,7 +75,9 @@ footer {
 	text-align: center; }
  
  
-header { }
+header {
+	background: url("../img/pictures/green_cup.png") repeat;
+width: 100%;}
  
 	header nav {
 		font-family: "Lovers Quarrel";
@@ -159,11 +161,11 @@ header { }
  
  
 #logo img {
-	height: 30px;
+	height: 40px;
 	left: 118px;
 	position: absolute;
-	top: 22px;
-	width: 30px; }
+	top: 15px;
+	width: 45px; }
  
  
 #lupa {
@@ -173,20 +175,45 @@ header { }
 	top: 4px; }
  
  
-nav { background-color: #669966; }
+nav { 
+	*background-color: #669966;
+	background-image: url("../img/pictures/pattern.png");
+	background-color: #9cb369;
+	border-radius: 4px;
+	border: 1px solid #839b4e;
+	text-align: center;
+	width: 100%;
+}
+
+nav ul {
+	text-align: center;
+}
  
 	nav ul li {
 		-moz-transition: background-color 0.2s;
 		-o-transition: background-color 0.2s;
 		-webkit-transition: background-color 0.2s;
-		transition: background-color 0.2s; }
- 
-		nav ul li:hover { background-color: #A8C350; }
+		transition: background-color 0.2s;
+		border-right: 1px solid #b2c58b;}
+  nav ul li:nth-child(1) {
+		 border-left: 1px solid #b2c58b;
+ 	}
+		nav ul li:hover { 
+  		text-shadow: 0 1px 2px #708543;
+		  background-image: url("../img/pictures/pattern.png");
+			background-color: #7B9148;	
+		}
  
 		nav ul li a {
-			color: black;
+			font-family: "Roboto";
+			font-size: 13px;
+			color: white;
 			padding: 5px 10px;
 			text-decoration: none; }
+
+		nav ul li:hover a {
+			color: black;
+		}
  
  
 #searchBar {
@@ -206,13 +233,12 @@ nav { background-color: #669966; }
 		border: 0px;
 		width: 83%; }
  
- 
-section { padding-top: 20px; }
- 
- 
 #socialBar { text-align: center; }
  
- 
+ body {
+background: rgba(81, 141, 69, 0.5) url("http://www.transparenttextures.com/patterns/wall-4-light.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+ }
 .socialIcon {
 	display: inline-block;
 	margin-right: 8px;
@@ -237,3 +263,68 @@ section { padding-top: 20px; }
 			-o-transform: rotate(360deg);
 			-webkit-transform: rotate(360deg);
 			transform: rotate(360deg); }
+
+div.button {
+	display: inline-block;
+	text-align: center;
+}
+
+.animate
+{
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+
+.action-button
+{
+	position: relative;
+	padding: 1px 45px;
+  left: 5px;
+  float: left;
+	border-radius: 10px;
+	font-family: 'Pacifico', cursive;
+	font-size: 16px;
+	color: #FFF;
+	text-decoration: none;
+}
+
+.blue
+{
+	background-color: #3498DB;
+	border-bottom: 5px solid #2980B9;
+	text-shadow: 0px -2px #2980B9;
+}
+
+.red
+{
+	background-color: #E74C3C;
+	border-bottom: 5px solid #BD3E31;
+	text-shadow: 0px -2px #BD3E31;
+}
+
+.green
+{
+	background-color: #82BF56;
+	border-bottom: 5px solid #669644;
+	text-shadow: 0px -2px #669644;
+}
+
+.yellow
+{
+	background-color: #F2CF66;
+	border-bottom: 5px solid #D1B358;
+	text-shadow: 0px -2px #D1B358;
+}
+
+.action-button:active
+{
+	transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
+}
+
+.action-button.green:hover {
+	background-color: #5C8F36;
+	border-bottom: 5px solid #385821;
+	text-shadow: 0px -2px #385821;
+}
