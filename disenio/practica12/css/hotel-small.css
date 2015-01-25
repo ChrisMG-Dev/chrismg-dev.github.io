@@ -21,8 +21,8 @@
 	transition:background-position 0.2s ; }
  
 	.arrow-right:hover { background-position: 95px; }
- 
- 
+
+
 article {
 	display: inline-block;
 	margin: 5px 1px 5px 1px;
@@ -77,7 +77,7 @@ footer {
  
 header {
 	background: url("../img/pictures/green_cup.png") repeat;
-width: 100%;}
+	width: 100%;}
  
 	header nav {
 		font-family: "Lovers Quarrel";
@@ -165,7 +165,9 @@ width: 100%;}
 	left: 118px;
 	position: absolute;
 	top: 15px;
-	width: 45px; }
+	width: 45px;
+ filter: brightness(110%);
+}
  
  
 #lupa {
@@ -176,7 +178,6 @@ width: 100%;}
  
  
 nav { 
-	*background-color: #669966;
 	background-image: url("../img/pictures/pattern.png");
 	background-color: #9cb369;
 	border-radius: 4px;
@@ -227,17 +228,17 @@ nav ul {
 	min-width: 250px;
 	padding: 3px;
 	text-align: center;
-	width: 80%; }
+	width: 80%;
+	background-color: white;}
  
 	#searchBar input {
 		border: 0px;
 		width: 83%; }
  
 #socialBar { text-align: center; }
- 
+
  body {
 background: rgba(81, 141, 69, 0.1) url("http://www.transparenttextures.com/patterns/wall-4-light.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
  }
 .socialIcon {
 	display: inline-block;
@@ -279,6 +280,7 @@ div.button {
 {
 	position: relative;
 	padding: 1px 45px;
+	top: 8px;
   left: 5px;
   float: left;
 	border-radius: 10px;
@@ -288,32 +290,11 @@ div.button {
 	text-decoration: none;
 }
 
-.blue
-{
-	background-color: #3498DB;
-	border-bottom: 5px solid #2980B9;
-	text-shadow: 0px -2px #2980B9;
-}
-
-.red
-{
-	background-color: #E74C3C;
-	border-bottom: 5px solid #BD3E31;
-	text-shadow: 0px -2px #BD3E31;
-}
-
 .green
 {
 	background-color: #82BF56;
 	border-bottom: 5px solid #669644;
 	text-shadow: 0px -2px #669644;
-}
-
-.yellow
-{
-	background-color: #F2CF66;
-	border-bottom: 5px solid #D1B358;
-	text-shadow: 0px -2px #D1B358;
 }
 
 .action-button:active

@@ -3,13 +3,16 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:500,700,400);
  
 @import url(http://fonts.googleapis.com/css?family=Lovers+Quarrel);
- 
- 
+
 * {
 	margin: 0;
 	padding: 0; }
  
  
+body {
+ background: rgba(81, 141, 69, 0.1) url("http://www.transparenttextures.com/patterns/wall-4-light.png");
+}
+
 .arrow-right {
 	-moz-background-size: 16px 16px;
 	-moz-transition:background-position 0.2s  ease-out;
@@ -87,7 +90,8 @@ footer {
 	width: 65%; }
  
  
-header { }
+header { background: url("../img/pictures/green_cup.png") repeat;
+}
  
 	header nav {
 		font-family: "Lovers Quarrel";
@@ -179,38 +183,60 @@ header { }
 	left: 140px;
 	position: absolute;
 	top: 20px;
-	width: 45px; }
+	width: 45px; 
+  filter: brightness(110%);
+}
  
  
-nav { background-color: #669966; }
+nav { 
+	background-image: url("../img/pictures/pattern.png");
+	background-color: #9cb369;
+	border-radius: 4px;
+	border: 1px solid #839b4e;
+	text-align: center;
+	width: 100%;
+}
+ 
+nav ul {
+	text-align: center;
+}
  
 	nav ul li {
 		-moz-transition: background-color 0.2s;
 		-o-transition: background-color 0.2s;
 		-webkit-transition: background-color 0.2s;
-		border-bottom: 4px solid #669966;
-		padding-top: 4px;
-		transition: background-color 0.2s; }
- 
-		nav ul li:hover {
-			background-color: #A8C350;
-			border-bottom: 4px solid #453823; }
+		transition: background-color 0.2s;
+		border-right: 1px solid #b2c58b;}
+  nav ul li:nth-child(1) {
+		 border-left: 1px solid #b2c58b;
+ 	}
+		nav ul li:hover { 
+  		text-shadow: 0 1px 2px #708543;
+		  background-image: url("../img/pictures/pattern.png");
+			background-color: #7B9148;	
+		}
  
 		nav ul li a {
-			color: black;
-			padding: 5px 10px;
+			font-family: "Roboto";
+			font-size: 15px;
+			color: white;
+			padding: 5px 20px;
 			text-decoration: none; }
+
+		nav ul li:hover a {
+			color: black;
+		}
  
  
 #panel {
-	background: url("../img/pictures/main1.png");
+	background: url("../img/pictures/main3.png");
 	-moz-background-size: 100% 220px;
 	-o-background-size: 100% 220px;
 	-webkit-background-size: 100% 220px;
 	background-repeat: no-repeat;
 	background-size: 100% 220px;
 	display: inline-block;
-	height: 200px;
+	height: 220px;
 	width: 100%; }
  
  
@@ -220,20 +246,21 @@ nav { background-color: #669966; }
 	-webkit-border-radius: 15px;
 	background: rgba(255,255,255,0.2);
 	border-radius: 15px;
-	border: 2px solid white;
+	border: 2px solid grey;
 	display: inline-block;
 	margin: 15px 0px 0px 5px;
 	min-width: 250px;
 	padding: 3px;
 	position: relative;
 	text-align: center;
-	top: 90px;
-	width: 95%; }
+	top: 110px;
+	width: 95%;
+	background-color: white;}
  
 	#searchBar input {
 		border: 0px;
 		text-align: center;
-		width: 95%; }
+		width: 90%;}
  
  
 section { padding-top: 20px; }
@@ -280,12 +307,13 @@ div.button {
 .action-button
 {
 	position: relative;
-	padding: 1px 45px;
+	padding: 2px 45px;
+	top: 8px;
   left: 5px;
   float: left;
 	border-radius: 10px;
 	font-family: 'Pacifico', cursive;
-	font-size: 20px;
+	font-size: 16px;
 	color: #FFF;
 	text-decoration: none;
 }
