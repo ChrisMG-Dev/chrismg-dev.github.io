@@ -233,3 +233,18 @@ footer {
 #panel {
 	text-align: center;
 }
+
+#languageBar table {
+	margin-top: -15px;
+}
+
+#languageBar th img{
+	width: 16px;
+	height: 16px;
+}
+
+#languageBar td a{
+	padding: 0px 5px;
+	text-decoration: none;
+	color: black;
+}
