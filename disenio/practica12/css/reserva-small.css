@@ -6,7 +6,6 @@
 	padding: 0; }
 
 #container {
-	*padding: 0 10px 0 10px;
 	font-family: "Roboto";
 	font-size: 14px;
 	margin: 0 auto;
@@ -220,13 +219,11 @@ footer {
 	text-align: center;
 }
 
-#languageBar {
-	float: right;
-}
-
 #languageBar table {
-	margin-top: -40px;
-	margin-bottom: 5px;
+	margin-top: -15px;
+	float: right;
+	position: relative;
+	top: -30px;
 }
 
 #languageBar th img{

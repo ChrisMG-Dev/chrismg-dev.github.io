@@ -227,12 +227,11 @@ footer {
 	text-align: center;
 }
 
-#languageBar {
-	float: right;
-}
-
 #languageBar table {
-	margin-top: -45px;
+	margin-top: -15px;
+	float: right;
+	position: relative;
+	top: -30px;
 }
 
 #languageBar th img{
