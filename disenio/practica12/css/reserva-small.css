@@ -163,8 +163,8 @@ article {
 }
 
 #nights {
-	display: inline-block;
-	float: right;
+	display: block;
+	text-align: right;
 }
 
 #total {
