@@ -7,7 +7,10 @@
 * {
 	margin: 0;
 	padding: 0; }
- 
+
+#lupa {
+	display: none;
+}
  
 body {
  background: rgba(81, 141, 69, 0.1) url("http://www.transparenttextures.com/patterns/wall-4-light.png");
