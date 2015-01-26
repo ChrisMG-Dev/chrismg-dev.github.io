@@ -357,3 +357,18 @@ div.button {
 	border-bottom: 5px solid #385821;
 	text-shadow: 0px -2px #385821;
 }
+
+#languageBar table {
+	margin-top: -15px;
+}
+
+#languageBar th img{
+	width: 16px;
+	height: 16px;
+}
+
+#languageBar td a{
+	padding: 0px 5px;
+	text-decoration: none;
+	color: black;
+}
