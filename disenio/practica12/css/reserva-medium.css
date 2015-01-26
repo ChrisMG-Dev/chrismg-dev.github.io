@@ -30,7 +30,8 @@ header nav {
 	font-family: "Lovers Quarrel";
 	font-size: 26px;
 	text-align: center;
-	width: 0 auto; }
+	width: 0 auto;
+	clear: both; }
 
 	header nav ul {
 		display: block;
@@ -86,26 +87,6 @@ nav ul li a {
 nav ul li:hover a {
 	color: black;
 }
-
-#languageBar {
-	float: right;
-	font-size: 10px;
-	margin-top: 16px;
-	padding-right: 30px;
-	padding-top: 15px; }
- 
-	#languageBar ul { padding: 0; }
- 
-		#languageBar ul li { padding: 0px 1px; }
- 
-			#languageBar ul li.flag {
-				display: inline-block;
-				position: absolute;
-				text-align: center; }
- 
-			#languageBar ul li a {
-				color: black;
-				text-decoration: none; }
 
 .flag img {
 	-moz-transition: 0.4s all;
@@ -246,8 +227,12 @@ footer {
 	text-align: center;
 }
 
+#languageBar {
+	float: right;
+}
+
 #languageBar table {
-	margin-top: -15px;
+	margin-top: -45px;
 }
 
 #languageBar th img{
