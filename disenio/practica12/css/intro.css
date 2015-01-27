@@ -22,7 +22,7 @@
 	to {left: 0px;visibility: visible;}
 }
 
-#container {
+#container{
 	min-width: 320px;
 	margin: 0 auto;
 }
@@ -126,7 +126,7 @@ h1 {
 	}
 	
 	#enter a {
-		font-size: 26px;
+		font-size: 22px;
 	}
 }
 
@@ -138,4 +138,9 @@ h1 {
 	#enter a {
 		font-size: 36px;
 	}
+}
+
+#stickyHeader {
+	position: fixed;
+	width: 100%;
 }
