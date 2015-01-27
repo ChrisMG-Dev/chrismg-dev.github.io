@@ -1,0 +1,136 @@
+@import url(http://fonts.googleapis.com/css?family=Lovers+Quarrel);
+
+@-webkit-keyframes titleTrans {
+	0% {opacity: 0.4;filter: alpha(opacity=40);}
+  50% {opacity: 0.7;filter: alpha(opacity=70);}
+	100% {opacity: 0.4;filter: alpha(opacity=40)}
+}
+
+@-moz-keyframes titleTrans {
+	0% {opacity: 0.4;filter: alpha(opacity=40);}
+  50% {opacity: 0.7;filter: alpha(opacity=70);}
+	100% {opacity: 0.4;filter: alpha(opacity=40)}
+}
+
+@-webkit-keyframes buttonAppears {
+	from {left: 600px;visibility: hidden;}
+	to {left: 0px;visibility: visible;}
+}
+
+@-moz-keyframes buttonAppears {
+	from {left: 600px;visibility: hidden;}
+	to {left: 0px;visibility: visible;}
+}
+
+#container {
+	min-width: 320px;
+	margin: 0 auto;
+}
+
+body {
+	background: url("../img/pictures/intro-large.png") no-repeat center center fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+	font-family: "Lovers Quarrel";
+	font-size: 84px;
+	text-align: center;
+	background-color: white;
+	opacity: 0.4;
+  -webkit-animation-name: titleTrans;
+	-moz-animation-name: titleTrans;
+	-o-animation-name: titleTrans;
+	animation-name: titleTrans;
+	-webkit-animation-duration: 3s;
+	-moz-animation-duration: 3s;
+	-o-animation-duration: 3s;
+	        animation-duration: 3s;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-timing-function: linear;
+	-o-animation-timing-function: linear;
+	        animation-timing-function: linear;
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	-o-animation-delay: 1s;
+	        animation-delay: 1s;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-o-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	-moz-animation-direction: alternate;
+	-o-animation-direction: alternate;
+	        animation-direction: alternate;
+	-webkit-animation-play-state: running;
+	-moz-animation-play-state: running;
+	-o-animation-play-state: running;
+	        animation-play-state: running;
+}
+
+#enter a {
+		color: white;
+		text-decoration: none;
+		box-shadow: 0px 5px 1px #839b4e;
+		padding: 5px 60px;
+		border-radius: 11px;
+		background-image: url("../img/pictures/pattern.png");
+		background-color: #9cb369;
+		border: 2px solid #9cb369;
+}
+
+#enter {
+		text-align: center;
+		position: relative;
+		left: 300px;
+		visibility: hidden;
+		-webkit-animation-name: buttonAppears;
+		-moz-animation-name: buttonAppears;
+		-o-animation-name: buttonAppears;
+		animation-name: buttonAppears;
+		-webkit-animation-duration: 2s;
+		-moz-animation-duration: 2s;
+		-o-animation-duration: 2s;
+						animation-duration: 2s;
+		-webkit-animation-timing-function: cubic-bezier(0.02,0.05,0.25,1);
+		-moz-animation-timing-function: cubic-bezier(0.02,0.05,0.25,1);
+		-o-animation-timing-function: cubic-bezier(0.02,0.05,0.25,1);
+		        animation-timing-function: cubic-bezier(0.02,0.05,0.25,1);
+		-webkit-animation-play-state: running;
+		-moz-animation-play-state: running;
+		-o-animation-play-state: running;
+		        animation-play-state: running;
+		-webkit-animation-fill-mode: forwards;
+		-moz-animation-fill-mode: forwards;
+		-o-animation-fill-mode: forwards;
+		        animation-fill-mode: forwards;
+}
+
+#enter a:hover {
+	background-color: #6B7D40;
+	border: 1px solid #6B7D40;
+	box-shadow: 0px 5px 1px #374121;
+}
+
+@media (min-width: 600px) {
+  #enter {
+		top: 80px;
+	}
+	
+	#enter a {
+		font-size: 26px;
+	}
+}
+
+@media (min-width: 1240px) {
+  #enter {
+		top: 160px;
+	}
+	
+	#enter a {
+		font-size: 36px;
+	}
+}
