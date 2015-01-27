@@ -112,6 +112,10 @@ article {
  	margin: 5px;
 	padding: 5px 10px;
 	border: 1px solid black;
+	border-radius: 12px;
+	background-image: url("../img/pictures/pattern.png");
+	background-color: #CEDAB4;
+	border: 1px solid #839b4e;
 }
 
 #hotelPreview {
@@ -179,15 +183,19 @@ article {
 label {
 	display: inline-block;
 	width: 120px;
+	text-align: left;
 }
 
 label.lblBlock {
-	display: block;
+	text-align: left;
 }
 
 footer {
+	padding-top: 10px;
 	text-align: center;
-	background-color: #A8C350;
+	background-image: url("../img/pictures/pattern.png");
+  background-color: #9cb369;
+	color: white
 }
 
 .socialIcon {
@@ -232,7 +240,14 @@ footer {
 }
 
 #languageBar td a{
+	font-size: 12px;
 	padding: 0px 5px;
 	text-decoration: none;
 	color: black;
+}
+
+form {
+	width: 100%;
+	display: inline-block;
+	text-align: center;
 }

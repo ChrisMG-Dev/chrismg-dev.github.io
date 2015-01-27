@@ -116,6 +116,7 @@ article {
 	background-image: url("../img/pictures/pattern.png");
 	background-color: #CEDAB4;
 	border: 1px solid #839b4e;
+	
 }
 
 #hotelPreview {
@@ -124,10 +125,9 @@ article {
 }
 
 #checkoutInfo {
-	width: 32%;
+	width: 38%;
 	font-size: 12px;
 	float: right;
-	height: 165px;
 }
 
 #customerData {
@@ -156,13 +156,13 @@ article {
 
 #hotelDescription {
 	display: inline-block;
-	width: 41%;
-	float:  right;
+	width: 70%;
+	float: right;
 }
 
 #hotelDescription p {
 	display: inline-block;
-	font-size: 12px;
+	font-size: 15px;
 	text-align: justify;
 	overflow: auto;
 }
@@ -190,7 +190,7 @@ article {
 label {
 	text-align: left;
 	display: inline-block;
-	width: 120px;
+	width: 160px;
 }
 
 label.lblBlock {
@@ -200,6 +200,7 @@ label.lblBlock {
 footer {
 	text-align: center;
 	background-color: #A8C350;
+	min-height: 100px;
 }
 
 .socialIcon {
@@ -253,4 +254,8 @@ form {
 	width: 100%;
 	display: inline-block;
 	text-align: center;
+}
+
+form label {
+	font-size: 16px;
 }
