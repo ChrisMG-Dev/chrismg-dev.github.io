@@ -92,6 +92,10 @@ h1 {
 		-moz-animation-name: buttonAppears;
 		-o-animation-name: buttonAppears;
 		animation-name: buttonAppears;
+		-webkit-animation-delay: 1s;
+		-moz-animation-delay: 1s;
+		-o-animation-delay: 1s;
+						animation-delay: 1s;
 		-webkit-animation-duration: 2s;
 		-moz-animation-duration: 2s;
 		-o-animation-duration: 2s;
