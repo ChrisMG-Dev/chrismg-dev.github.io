@@ -259,3 +259,27 @@ form {
 form label {
 	font-size: 16px;
 }
+
+input[type=text]:valid {
+	background-color: #95FF95;
+}
+
+input[type=text]:invalid {
+	background-color: #F18F65;
+}
+
+#panel input {
+	background-color: #A8C350;
+	border: 1px solid #A8C350;
+	box-shadow: 0px 4px 1px #829834;
+	border-radius: 9px;
+	padding: 5px 15px;
+	transition: all 0.5s;
+	margin-bottom: 5px;
+}
+
+#panel input:hover {
+	background-color: #889F37;
+	border: 1px solid #889F37;
+	box-shadow: 0px 4px 1px #607126;
+}
