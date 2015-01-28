@@ -1,10 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:500,700,400);
- 
+
+
 @import url(http://fonts.googleapis.com/css?family=Lovers+Quarrel);
- 
- body {
- background: rgba(81, 141, 69, 0.1) url("http://www.transparenttextures.com/patterns/wall-4-light.png");
-}
+
+
+
+body {
+	background: rgba(81, 141, 69, 0.1) url("../img/pictures/wall-4-light.png");
+ }
 
 
 #lupa {
@@ -26,8 +29,14 @@
 	background-image: url("../img/icons/right_arrow.png");
 	background-position: 160px;
 	background-repeat: no-repeat;
-	background-size: 16px 16px;
-	transition:background-position 0.2s ease-out ; }
+	-webkit-background-size: 16px 16px;
+	   -moz-background-size: 16px 16px;
+	     -o-background-size: 16px 16px;
+	        background-size: 16px 16px;
+	-webkit-transition:background-position 0.2s ease-out ;
+	   -moz-transition:background-position 0.2s ease-out ;
+	     -o-transition:background-position 0.2s ease-out ;
+	        transition:background-position 0.2s ease-out ; }
  
 	.arrow-right:hover { background-position: 100px; }
  
@@ -65,7 +74,10 @@ article {
 	left: -44px;
 	position: relative;
 	top: -18px;
-	transition: 0.4s all;
+	-webkit-transition: 0.4s all;
+	   -moz-transition: 0.4s all;
+	     -o-transition: 0.4s all;
+	        transition: 0.4s all;
 	width: 16px; }
  
 	.flag img:hover {
@@ -74,7 +86,11 @@ article {
 		-o-transform: rotate(-20deg);
 		-webkit-transform: rotate(-20deg);
 		height: 20px;
-		transform: rotate(-20deg);
+		-webkit-transform: rotate(-20deg);
+		   -moz-transform: rotate(-20deg);
+		    -ms-transform: rotate(-20deg);
+		     -o-transform: rotate(-20deg);
+		        transform: rotate(-20deg);
 		width: 20px; }
  
  
@@ -137,10 +153,15 @@ header {  background: url("../img/pictures/green_cup.png");
 		-webkit-box-shadow: 1px 1px 5px #999;
 		-webkit-transition: all 0.3s;
 		border: solid 1px #CCC;
-		box-shadow: 1px 1px 5px #999;
+		-webkit-box-shadow: 1px 1px 5px #999;
+		   -moz-box-shadow: 1px 1px 5px #999;
+		        box-shadow: 1px 1px 5px #999;
 		height: 100%;
 		padding: 5px;
-		transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+		   -moz-transition: all 0.3s;
+		     -o-transition: all 0.3s;
+		        transition: all 0.3s;
 		width: 100%; }
  
 		.hotelPreview img:hover {
@@ -183,14 +204,18 @@ header {  background: url("../img/pictures/green_cup.png");
 	position: absolute;
 	top: 10px;
 	width: 65px;
-	filter: brightness(110%);
+	filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1.1" /><feFuncG type="linear" slope="1.1" /><feFuncB type="linear" slope="1.1" /></feComponentTransfer></filter></svg>#filter');
+	-webkit-filter: brightness(110%);
+	        filter: brightness(110%);
 }
  
  
 nav { 
 	background-image: url("../img/pictures/pattern.png");
 	background-color: #9cb369;
-	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+	        border-radius: 4px;
 	border: 1px solid #839b4e;
 	text-align: center;
 	width: 100%;
@@ -233,7 +258,10 @@ nav ul {
 	-o-background-size: 100% 290px;
 	-webkit-background-size: 100% 290px;
 	background-repeat: no-repeat;
-	background-size: 100% 290px;
+	-webkit-background-size: 100% 290px;
+	   -moz-background-size: 100% 290px;
+	     -o-background-size: 100% 290px;
+	        background-size: 100% 290px;
 	display: inline-block;
 	height: 290px;
 	width: 100%; }
@@ -244,7 +272,9 @@ nav ul {
 	-moz-border-radius: 15px;
 	-webkit-border-radius: 15px;
 	background: rgba(255,255,255,0.2);
-	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	   -moz-border-radius: 15px;
+	        border-radius: 15px;
 	border: 2px solid white;
 	display: inline-block;
 	margin: 15px 0px 0px 5px;
@@ -278,11 +308,16 @@ section { padding-top: 20px; }
 		-o-transition: 0.5s all ease-in;
 		-webkit-border-radius: 40px;
 		-webkit-transition: 0.5s all ease-in;
-		border-radius: 40px;
+		-webkit-border-radius: 40px;
+		   -moz-border-radius: 40px;
+		        border-radius: 40px;
 		border: 1px solid #A8C350;
 		height: 40px;
 		margin: 2px;
-		transition: 0.5s all ease-in;
+		-webkit-transition: 0.5s all ease-in;
+		   -moz-transition: 0.5s all ease-in;
+		     -o-transition: 0.5s all ease-in;
+		        transition: 0.5s all ease-in;
 		width: 40px; }
  
 		.socialIcon img:hover {
@@ -299,7 +334,9 @@ div.button {
 
 .animate
 {
-	transition: all 0.1s;
+	-moz-transition: all 0.1s;
+	  -o-transition: all 0.1s;
+	     transition: all 0.1s;
 	-webkit-transition: all 0.1s;
 }
 
@@ -310,7 +347,9 @@ div.button {
 	top: 8px;
   left: 5px;
   float: left;
-	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	   -moz-border-radius: 10px;
+	        border-radius: 10px;
 	font-family: 'Pacifico', cursive;
 	font-size: 20px;
 	color: #FFF;
@@ -347,7 +386,10 @@ div.button {
 
 .action-button:active
 {
-	transform: translate(0px,5px);
+	-moz-transform: translate(0px,5px);
+	 -ms-transform: translate(0px,5px);
+	  -o-transform: translate(0px,5px);
+	     transform: translate(0px,5px);
   -webkit-transform: translate(0px,5px);
 	border-bottom: 1px solid;
 }
