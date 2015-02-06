@@ -111,6 +111,26 @@ article div.content {
   padding: 5px;
 }
 
+.image {
+  border: 1px solid black; 
+}
+
+.demo-1 {
+  background: url("../img/demo/1.jpg") center;
+  
+}
+
+.image .image-content {
+  opacity: 0;
+    background-color: rgba(255,255,255,1);
+  transition: all 0.4s;
+}
+
+.image:hover .image-content {
+  opacity: 1;
+  background-color: rgba(255,255,255,0.2);
+}
+
 .module.parallax-header {
   background-image: url("../img/backgrounds/header2.jpg");
   font-size: 32px; }
