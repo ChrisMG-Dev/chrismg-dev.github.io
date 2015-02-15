@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300|Lato:100);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+
 * {
   padding: 0;
   margin: 0;}
@@ -22,7 +25,7 @@ nav {
   display: block;
   position: fixed;
   width: 100%;
-  background-color: black;
+  background-color: rgba(255,255,255,0.5);
   z-index: 2;
 }
 
@@ -32,7 +35,7 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  color: white;
+  color: black;
   padding: 5px 15px 0px 0px;
 }
 
@@ -65,17 +68,49 @@ nav ul li {
   z-index: 0;
 }
 
+@-moz-keyframes introShake {
+  0% {
+      opacity: 0;
+      transform: translateY(-2000px);
+  }
+  60% {
+      opacity: 1;
+      transform: translateY(30px);
+  }
+  80% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(0px);
+  }
+}
+
+.container {
+  position: relative;
+  top: -20px;
+  animation: introShake;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+
+
 #description h3 {
   color: white;
-  font-size: 16px;
+  font-family: "PT Sans Narrow";
+  font-size: 32px;
   text-align: center;
 }
 
 #description h4 {
   color: white;
-  font-size: 12px;
+  margin: 15px 0px 15px 0px;
+  font-size: 18px;
   text-align: center;
-  padding: 5px;}
+  font-family: "Lato";
+  font-weight: 100; 
+}
 
 #profile-pic img {
   display: block;
@@ -89,8 +124,8 @@ section {
   padding: 10px;
 }
 
-#about-me article {
-  
+main {
+  font-family: 'Open Sans';
 }
 
 #about-me article .title {
@@ -109,6 +144,8 @@ article div.content {
   text-align: center;
   color: white;
   padding: 5px;
+  font-family: 'Open Sans';
+  font-weight: 300;
 }
 
 .image {
@@ -126,8 +163,8 @@ article div.content {
 
 #works article {
   display: inline-block;
-  max-width: 320px;
-  margin: 10px auto;
+  max-width: 280px;
+  margin: 5px auto;
 }
 
 .image .image-content {
@@ -163,4 +200,41 @@ article div.content {
     font-size: 46px;
     margin: 0; } }
 
-/*# sourceMappingURL=portfolio.css.map */
+#contactPanel {
+  display: block;
+  text-align: center;
+}
+
+#contactPanel > div{
+  display: inline-block;
+}
+
+#contact form {
+  text-align: center;
+  width: 50%;
+  min-width: 150px;
+  margin: 0 auto;
+}
+
+#contact input, #contact textarea{
+  font-size: 14px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border: 1px solid #BFBFBF;
+  padding: 10px 5px 10px 25px;
+}
+
+#contact textarea {
+  height: 120px;
+  resize: none;
+}
+
+#contact input:required {
+  border: 1px solid #BFBFBF;
+}
+
+#contact form button {
+ 
+}
