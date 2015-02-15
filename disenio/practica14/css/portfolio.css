@@ -149,6 +149,13 @@ main {
   font-family: 'Open Sans';
 }
 
+@media all and (min-width: 550px) {
+  #about-me article {
+    display: inline-block;
+    width: 49%;
+  }
+}
+
 #about-me article .title {
   text-align: center;
   font-weight: bold;
