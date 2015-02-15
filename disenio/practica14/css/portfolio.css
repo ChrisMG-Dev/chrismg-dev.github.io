@@ -85,6 +85,23 @@ nav ul li {
   }
 }
 
+@-webkit-keyframes introShake {
+  0% {
+      -webkit-opacity: 0;
+      -webkit-transform: translateY(-2000px);
+  }
+  60% {
+      -webkit-opacity: 1;
+      -webkit-transform: translateY(30px);
+  }
+  80% {
+      -webkit-transform: translateY(-10px);
+  }
+  100% {
+      -webkit-transform: translateY(0px);
+  }
+}
+
 .container {
   position: relative;
   top: -20px;
@@ -92,6 +109,10 @@ nav ul li {
   animation-delay: 1s;
   animation-duration: 1s;
   animation-fill-mode: both;
+  -webkit-animation: introShake;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
 }
 
 
