@@ -126,7 +126,7 @@ nav ul li {
 
 #description h4 {
   color: white;
-  margin: 15px 0px 15px 0px;
+  margin: 5px 0px 10px 0px;
   font-size: 18px;
   text-align: center;
   font-family: "Lato";
@@ -137,7 +137,7 @@ nav ul li {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding: 60px 0px 10px 0px;
+  padding: 60px 0px 0px 0px;
 }
 
 section {
@@ -232,7 +232,8 @@ article div.content {
 
 #contact form {
   text-align: center;
-  width: 50%;
+  width: 90%;
+  max-width: 460px;
   min-width: 150px;
   margin: 0 auto;
 }
@@ -258,4 +259,30 @@ article div.content {
 
 #contact form button {
  
+}
+
+#iconPanel {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+#iconPanel ul{
+  display: inline-block;
+  
+}
+
+#iconPanel ul li{
+  display: inline-block;
+  padding: 0px 5px;
+}
+
+#iconPanel ul li a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+#iconPanel ul li img {
+   width: 24px;
+   height: 24px;
 }
