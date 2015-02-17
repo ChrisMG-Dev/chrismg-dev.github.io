@@ -161,7 +161,7 @@ main {
 @media all and (min-width: 550px) {
   #about-me article {
     display: inline-block;
-    width: 49%;
+    width: 45%;
   }
 }
 
