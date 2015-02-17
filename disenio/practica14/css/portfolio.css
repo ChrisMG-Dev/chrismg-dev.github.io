@@ -157,11 +157,13 @@ main {
   #about-me article {
     display: inline-block;
     width: 49%;
+    vertical-align: top;
   }
 }
 
 #about-me article .title {
   text-align: center;
+  margin: 0 auto;
   font-weight: bold;
   border-bottom: 1px solid black; 
 }
@@ -297,3 +299,99 @@ article div.content {
    width: 24px;
    height: 24px;
 }
+
+#about-me {
+  color: #444948;
+}
+
+#about-me b {
+  color: #214A64;
+}
+
+main {
+  background-image: url("../img/backgrounds/fleck-white.png");
+}
+
+.knowhow {
+  padding: 20px 0px;
+  width: 100%;
+}
+
+.knowhow h4 {
+  text-align: center;
+}
+
+#study {
+    background-image: url("../img/icons/study.png");
+}
+
+#study, #languages {
+  height: 200px;
+  width: 200px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+}
+
+#languages {
+  background-image: url("../img/icons/talk.png");
+}
+
+.image-content {
+  opacity: 0;
+  background-color: rgba(255,255,255,1);
+}
+
+#study:hover .image-content, #languages:hover .image-content {
+  opacity: 1;
+  background-color: rgba(255,255,255,0.2);
+  color: black;
+  font-size: 24px;
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  padding-top: 80px;
+  border-radius: 160px;
+}
+
+.niceList { 
+  width: 100%; 
+}
+.niceList ol {
+  padding-left: 14px;
+  font-style:italic; 
+  font-family:Georgia, Times, serif; font-size:16px;
+  color: black; 
+}
+.niceList ol li {
+}
+.niceList ol li p { 
+  padding:8px;
+  font-style:normal;
+  font-family:Arial;
+  font-size:13px;
+  color: black;
+  border-left: 1px solid #999;
+}
+.niceList ol li p em { display:block; }
+
+.bar { 
+	height: 10px;
+	background: grey;
+	border-radius: 7px;
+	padding: 3px;
+	box-shadow: inset 0 -1px 1px rgba(255,255,255,0.2);
+}
+
+.bar > span {
+  display: block;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #649EF7; 
+  
+}
+
+
+
+
