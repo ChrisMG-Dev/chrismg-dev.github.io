@@ -153,19 +153,24 @@ main {
   font-family: 'Open Sans';
 }
 
+#about-me article {
+    vertical-align: top;
+    padding: 10px;
+}
+
 @media all and (min-width: 550px) {
   #about-me article {
     display: inline-block;
     width: 49%;
-    vertical-align: top;
   }
 }
 
 #about-me article .title {
   text-align: center;
-  margin: 0 auto;
+  margin: 0 auto 16px auto;
   font-weight: bold;
   border-bottom: 1px solid black; 
+  padding-bottom: 6px;
 }
 
 article div.content {
@@ -187,24 +192,37 @@ article div.content {
 }
 
 .demo-1 {
-  background: url("../img/demo/1.jpg") center;
-  
+  background: url("../img/demo/login-php.png") center;
+  background-size: 100% 200px;
+  width: 100%;
+  height: 200px;
+}
+
+.demo-2 {
+  background: url("../img/demo/drdoku.png") center;
+  background-size: 100% 200px;
+  width: 100%;
+  height: 200px;
 }
 
 #works {
   text-align: center;
+  padding: 0px 5px;
 }
 
 #works article {
   display: inline-block;
-  max-width: 280px;
+  width: 100%;
+  max-width: 400px;
   margin: 5px auto;
+  vertical-align: top;
 }
 
 .image .image-content {
   opacity: 0;
   background-color: rgba(255,255,255,1);
   transition: all 0.4s;
+  height: 200px;
 }
 
 .image:hover .image-content {
@@ -370,7 +388,7 @@ main {
   padding:8px;
   font-style:normal;
   font-family:Arial;
-  font-size:13px;
+  font-size:16px;
   color: black;
   border-left: 1px solid #999;
   color: #444948;
@@ -392,6 +410,7 @@ main {
   background-color: #649EF7; 
   
 }
+
 #about-me table {
   text-align: center;  
   font-size: 14px;
@@ -404,7 +423,7 @@ main {
 }
 
 #about-me table th, #about-me table td {
-  padding: 6px;
+  padding: 4px;
 }
 
 #english-icon {
