@@ -362,7 +362,7 @@ main {
   padding-left: 14px;
   font-style:italic; 
   font-family:Georgia, Times, serif; font-size:16px;
-  color: black; 
+  color: #444948; 
 }
 .niceList ol li {
 }
@@ -373,6 +373,7 @@ main {
   font-size:13px;
   color: black;
   border-left: 1px solid #999;
+  color: #444948;
 }
 .niceList ol li p em { display:block; }
 
@@ -391,7 +392,32 @@ main {
   background-color: #649EF7; 
   
 }
+#about-me table {
+  text-align: center;  
+  font-size: 14px;
+  margin: 0 auto;
+}
 
+ #about-me td {
+  border: 1px solid #D1D1D1;
+  border-spacing: 0;
+}
 
+#about-me table th, #about-me table td {
+  padding: 6px;
+}
 
+#english-icon {
+    background-image: url("../img/icons/uk.png");
+}
+
+#french-icon {
+    background-image: url("../img/icons/france.png");
+}
+
+#english-icon, #french-icon {
+  background-position: center;
+  height: 48px;
+  width: 48px;
+}
 
