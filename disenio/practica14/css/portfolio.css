@@ -8,7 +8,9 @@
 #container {
   margin: 0 auto;
   min-width: 280px;
-  width: 100%; }
+  width: 100%;
+  overflow-x: hidden;
+}
 
 header #bg-img {
   max-height: 100%;
