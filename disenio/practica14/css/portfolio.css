@@ -237,7 +237,7 @@ article div.content {
 }
 
 .module.parallax-header {
-  background-image: url("../img/backgrounds/header5.jpg");
+  background-image: url("../img/backgrounds/header13.jpg");
   font-size: 32px; }
 
 @media all and (min-width: 600px) {
@@ -325,7 +325,7 @@ article div.content {
 }
 
 #about-me b {
-  color: #214A64;
+  color: #0D362C;
 }
 
 main {
@@ -382,7 +382,7 @@ main {
   padding-left: 14px;
   font-style:italic; 
   font-family:Georgia, Times, serif; font-size:16px;
-  color: #444948; 
+  color: #2B133B; 
 }
 .niceList ol li {
 }
@@ -392,7 +392,7 @@ main {
   font-family:Arial;
   font-size:16px;
   color: black;
-  border-left: 1px solid #999;
+  border-left: 1px solid #2B133B;
   color: #444948;
 }
 .niceList ol li p em { display:block; }
@@ -442,3 +442,71 @@ main {
   width: 48px;
 }
 
+#contactPanel {
+  margin: 20px;
+}
+
+.emailIcon {
+  background-image: url("../img/icons/email20.png");
+  height: 32px;
+  width: 32px;
+}
+
+.iconLabel {
+  padding: 5px 10px;
+  position: relative;
+  top: -10px;
+}
+
+#submit {
+  margin: 10px;
+  padding: 10px 20px;
+  border: 1px solid #BFBFBF;
+  background-color: white;
+  transition: all 0.4s;
+}
+
+#submit:hover {
+  background-color: #E3E3E8;
+}
+
+footer {
+  text-align: center;
+  background-color: #1B1B29;
+  color: white;
+}
+
+footer h3 {
+  padding: 20px 0px 10px 0px;
+}
+
+#copyright {
+  padding: 5px 0px 10px 0px;
+}
+
+#footerPanel {
+  width: 60%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.GithubIcon, .TwitterIcon, .linkninIcon {
+  display: inline-block;
+  height: 46px;
+  width: 46px;
+  background-repeat: no-repeat;
+  background-size: 46px;
+  padding: 0px 8px 0px 8px;
+}
+
+.TwitterIcon {
+  background-image: url("../img/icons/twitter.png");
+}
+
+.GithubIcon {
+  background-image: url("../img/icons/github.png"); 
+}
+
+.linkninIcon {
+  background-image: url("../img/icons/linkedin.png");
+}
