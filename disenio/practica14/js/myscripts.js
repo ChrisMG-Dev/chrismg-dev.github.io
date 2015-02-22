@@ -41,7 +41,9 @@ $(function() {
     if ($("#asunto").val().length != 0
         && $("#mensaje").val().length != 0
         && $("#correo").val().length != 0) {
-      animarBoton();
+        var q = $("button").queue();
+        if (q.length == 0)
+          animarBoton();
     }
   })
 
