@@ -1,10 +1,10 @@
 function animarBoton() {
-  $("button")
-    .animate({backgroundColor: "white",color: "black"}, 1000)
-    .animate({ backgroundColor: "#1B1B29", color: "white"}, 1000, animarBoton); 
+  $("button").animate({backgroundColor: "white",color: "black"}, 1000);
+  $("button").animate({ backgroundColor: "#1B1B29", color: "white"}, 1000, animarBoton); 
 }
 
 $(function() {
+  var animacionUnaVez = false;
 	// Efecto de la cabecera
 	$("#description h4").runaway(".module.parallax", {offsetX:30, offsetY:30});
 
@@ -37,13 +37,12 @@ $(function() {
   });
 
   // Animación botón
-  $("#asunto, #correo, #mensaje").on("keydown mouseover", function() {
+  $("#asunto, #correo, #mensaje").on("keydown", function() {
     if ($("#asunto").val().length != 0
         && $("#mensaje").val().length != 0
         && $("#correo").val().length != 0) {
-        var q = $("button").queue();
-        if (q.length == 0)
-          animarBoton();
+      if(!animacionUnaVez)
+         animarBoton();
     }
   })
 
@@ -58,7 +57,8 @@ $(function() {
   });
 
   $("button").on("mouseover", function() {
-    $("button").queue([]);
+    $(this).queue([]);
+    animacionUnaVez = true;
   })
 
   // tabs
