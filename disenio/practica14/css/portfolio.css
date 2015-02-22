@@ -35,6 +35,15 @@
   }
 }
 
+#tabs, #tabs2 {
+  height: 96%;
+  overflow-y: auto;
+}
+
+#tabs:hover, #tabs2:hover {
+  opacity: 0.8;
+}
+
 #about-me
 {
   color:#444948;

@@ -38,4 +38,6 @@ $(function() {
         color: "black",
   	}, 100);
   });
+
+  $("#tabs, #tabs2").tabs();
 });
