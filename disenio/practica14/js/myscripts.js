@@ -1,9 +1,13 @@
-
+function animarBoton() {
+  $("button")
+    .animate({backgroundColor: "white",color: "black"}, 1000)
+    .animate({ backgroundColor: "#1B1B29", color: "white"}, 1000, animarBoton); 
+}
 
 $(function() {
 	// Efecto de la cabecera
-	$("#description h4").runaway(".module.parallax");
-
+	$("#description h4").runaway(".module.parallax", {offsetX:30, offsetY:30});
+  
 	// Datepicker
   $( "#fechaIni" ).datepicker({
     defaultDate: "+1w",
@@ -18,18 +22,19 @@ $(function() {
     defaultDate: "+1w",
     changeMonth: false,
     numberOfMonths: 1,
-    onClose: function( selectedDate ) {
-      $( "#fechaIni" ).datepicker( "option", "maxDate", selectedDate );
+    onClose: function(selectedDate) {
+      $( "#fechaIni" ).datepicker("option", "maxDate", selectedDate);
     }
   });
 
-  // Color animation botones
-
-  function animarBoton() {
-    $("button")
-      .animate({backgroundColor: "#000000",color: "white"}, 1000)
-      .animate({ backgroundColor: "#ffffff", color: "black"}, 1000, animarBoton); 
-  }
+  // Animación botón
+  $("#asunto, #correo, #mensaje").on("keydown mouseover", function() {
+    if ($("#asunto").val().length != 0
+        && $("#mensaje").val().length != 0
+        && $("#correo").val().length != 0) {
+      animarBoton();
+    }
+  })
 
   $("button").css({
         "background-color": "white",
@@ -43,24 +48,8 @@ $(function() {
 
   $("button").on("mouseover", function() {
     $("button").queue([]);
-      $(this).animate({
-	  backgroundColor: "#1B1B29",
-	  color: "white"
-      }, 1000 );
-  });
-  $("button").on("mouseleave", function() {
-    animarBoton();
-  	$(this).animate({
-        "background-color": "white",
-        "border-width": "1px",
-        "border-style": "solid",
-        "border-color": "#BFBFBF",
-        "margin": "10px",
-        "padding": "10px 20px",
-        "color": "black"
-  	}, 1000);
-  });
+  })
 
-
+  // tabs
   $("#tabs, #tabs2").tabs();
 });
