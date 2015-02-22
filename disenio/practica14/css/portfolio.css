@@ -260,6 +260,7 @@
   width:200px;
 }
 
+/*
 #submit, .image-content button
 {
   background-color:white;
@@ -268,13 +269,14 @@
   padding:10px 20px;
   transition:all .4s;
 }
-
+*/
+/*
 #submit:hover, .image-content button:hover
 {
   background-color:#1B1B29;
   color:white;
 }
-
+*/
 #works
 {
   padding:0 5px;

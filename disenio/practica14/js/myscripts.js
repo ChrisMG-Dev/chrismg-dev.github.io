@@ -1,3 +1,5 @@
+
+
 $(function() {
 	// Efecto de la cabecera
 	$("#description h4").runaway(".module.parallax");
@@ -21,23 +23,44 @@ $(function() {
     }
   });
 
-// Color animation botones
+  // Color animation botones
+
+  function animarBoton() {
+    $("button")
+      .animate({backgroundColor: "#000000",color: "white"}, 1000)
+      .animate({ backgroundColor: "#ffffff", color: "black"}, 1000, animarBoton); 
+  }
+
+  $("button").css({
+        "background-color": "white",
+        "border-width": "1px",
+        "border-style": "solid",
+        "border-color": "#BFBFBF",
+        "margin": "10px",
+        "padding": "10px 20px",
+        "color": "black"
+  });
+
   $("button").on("mouseover", function() {
+    $("button").queue([]);
       $(this).animate({
 	  backgroundColor: "#1B1B29",
 	  color: "white"
-      }, 100 );
+      }, 1000 );
   });
   $("button").on("mouseleave", function() {
+    animarBoton();
   	$(this).animate({
-        backgroundColor: "white",
-        borderWidth: "1px",
-        borderColor:"#BFBFBF",
-        margin: "10px",
-        padding: "10px 20px",
-        color: "black",
-  	}, 100);
+        "background-color": "white",
+        "border-width": "1px",
+        "border-style": "solid",
+        "border-color": "#BFBFBF",
+        "margin": "10px",
+        "padding": "10px 20px",
+        "color": "black"
+  	}, 1000);
   });
+
 
   $("#tabs, #tabs2").tabs();
 });
