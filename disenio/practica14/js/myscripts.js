@@ -7,21 +7,30 @@ function animarBoton() {
 $(function() {
 	// Efecto de la cabecera
 	$("#description h4").runaway(".module.parallax", {offsetX:30, offsetY:30});
-  
+
 	// Datepicker
   $( "#fechaIni" ).datepicker({
-    defaultDate: "+1w",
-    changeMonth: false,
     numberOfMonths: 1,
     minDate: 0,
+    prevText: '<Ant',
+    nextText: 'Sig>',
+    currentText: 'Hoy',
+    monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+    dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+    dateFormat: 'dd/mm/yy',
     onClose: function( selectedDate ) {
       $( "#fechaFin" ).datepicker( "option", "minDate", selectedDate );
     }
   });
   $( "#fechaFin" ).datepicker({
-    defaultDate: "+1w",
-    changeMonth: false,
     numberOfMonths: 1,
+    minDate: 0,
+    prevText: '<Ant',
+    nextText: 'Sig>',
+    currentText: 'Hoy',
+    monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+    dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+    dateFormat: 'dd/mm/yy',
     onClose: function(selectedDate) {
       $( "#fechaIni" ).datepicker("option", "maxDate", selectedDate);
     }
@@ -51,5 +60,5 @@ $(function() {
   })
 
   // tabs
-  $("#tabs, #tabs2").tabs();
+  $("#tabs, #tabs2").tabs({event: "mouseover"});
 });
