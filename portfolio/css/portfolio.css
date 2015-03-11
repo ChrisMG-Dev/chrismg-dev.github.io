@@ -1,0 +1,625 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300|Lato:100);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+
+@-moz-keyframes introShake {
+  0% {
+      opacity: 0;
+      transform: translateY(-2000px);
+  }
+  60% {
+      opacity: 1;
+      transform: translateY(30px);
+  }
+  80% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes introShake {
+  0% {
+      -webkit-opacity: 0;
+      -webkit-transform: translateY(-2000px);
+  }
+  60% {
+      -webkit-opacity: 1;
+      -webkit-transform: translateY(30px);
+  }
+  80% {
+      -webkit-transform: translateY(-10px);
+  }
+  100% {
+      -webkit-transform: translateY(0px);
+  }
+}
+
+#tabs, #tabs2 {
+  height: 96%;
+  overflow-y: auto;
+}
+
+#tabs:hover, #tabs2:hover {
+  opacity: 1;
+}
+
+#about-me
+{
+  color:#444948;
+}
+
+#about-me article
+{
+  padding:10px;
+  vertical-align:top;
+}
+
+ .title
+{
+  border-bottom:1px solid black;
+  color:#1B1B29;
+  font-weight:bold;
+  margin:0 auto 16px;
+  padding-bottom:6px;
+  text-align:center;
+}
+
+#works .title {
+  padding: 20px;
+}
+
+#about-me table
+{
+  font-size:14px;
+  margin:0 auto;
+  text-align:center;
+}
+
+#about-me table th,#about-me table td
+{
+  padding:4px;
+}
+
+#about-me td
+{
+  border:1px solid #D1D1D1;
+  border-spacing:0;
+}
+
+#contact form
+{
+  margin:0 auto;
+  max-width:460px;
+  min-width:150px;
+  text-align:center;
+  width:90%;
+}
+
+#contact input,#contact textarea
+{
+  border:1px solid #BFBFBF;
+  display:block;
+  font-size:14px;
+  margin-left:auto;
+  margin-right:auto;
+  padding:10px 5px 10px 25px;
+  width:80%;
+}
+
+#contact input:required
+{
+  border:1px solid #BFBFBF;
+}
+
+#contact textarea
+{
+  height:120px;
+  resize:none;
+}
+
+#contactPanel
+{
+  display:block;
+  margin:20px;
+  text-align:center;
+}
+
+#contactPanel > div,#iconPanel ul
+{
+  display:inline-block;
+}
+
+#container
+{
+  margin:0 auto;
+  min-width:280px;
+  overflow-x:hidden;
+  width:100%;
+}
+
+#copyright
+{
+  padding:5px 0 10px;
+}
+
+#description
+{
+  position:relative;
+  top:0;
+  transition:all .3s;
+  z-index:0;
+}
+
+#description h3
+{
+  color:white;
+  font-family:"PT Sans Narrow";
+  font-size:32px;
+  text-align:center;
+}
+
+#description h4
+{
+  color:white;
+  font-family:Lato;
+  font-size:18px;
+  font-weight:100;
+  margin:5px 0 10px;
+  text-align:center;
+  transition:all .6s;
+}
+
+#english-icon
+{
+  background-image:url(../img/icons/uk.png);
+}
+
+#english-icon,#french-icon
+{
+  background-position:center;
+  height:48px;
+  width:48px;
+}
+
+#footerPanel
+{
+  margin:0 auto;
+  padding:10px;
+  width:60%;
+}
+
+#french-icon
+{
+  background-image:url(../img/icons/France.png);
+}
+
+#iconPanel
+{
+  display:inline-block;
+  text-align:center;
+  width:100%;
+}
+
+#iconPanel ul li
+{
+  display:inline-block;
+  padding:0 5px;
+}
+
+#iconPanel ul li a
+{
+  display:inline-block;
+  text-decoration:none;
+}
+
+#iconPanel ul li img
+{
+  height:24px;
+  width:24px;
+}
+
+#languages
+{
+  background-image:url(../img/icons/talk.png);
+}
+
+#profile-pic img
+{
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  padding:110px 0 0;
+}
+
+#study
+{
+  background-image:url(../img/icons/study.png);
+}
+
+#study,#languages
+{
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  height:200px;
+  margin:0 auto;
+  width:200px;
+}
+
+#study:hover .image-content,#languages:hover .image-content
+{
+  background-color:rgba(255,255,255,0.2);
+  border-radius:160px;
+  color:black;
+  font-size:24px;
+  height:200px;
+  opacity:1;
+  padding-top:80px;
+  text-align:center;
+  width:200px;
+}
+
+/*
+#submit, .image-content button
+{
+  background-color:white;
+  border:1px solid #BFBFBF;
+  margin:10px;
+  padding:10px 20px;
+  transition:all .4s;
+}
+*/
+/*
+#submit:hover, .image-content button:hover
+{
+  background-color:#1B1B29;
+  color:white;
+}
+*/
+#works
+{
+  padding:0 5px;
+  text-align:center;
+}
+
+#works article
+{
+  display:inline-block;
+  margin:5px auto;
+  max-width:400px;
+  vertical-align:top;
+  width:100%;
+}
+
+*
+{
+  margin:0;
+  padding:0;
+}
+
+.GithubIcon
+{
+  background-image:url(../img/icons/github.png);
+}
+
+.GithubIcon,.TwitterIcon,.linkninIcon
+{
+  background-repeat:no-repeat;
+  background-size:46px;
+  display:inline-block;
+  height:46px;
+  padding:0 8px;
+  width:46px;
+}
+
+.TwitterIcon
+{
+  background-image:url(../img/icons/twitter.png);
+}
+
+.bar
+{
+  background:grey;
+  border-radius:7px;
+  box-shadow:inset 0 -1px 1px rgba(255,255,255,0.2);
+  height:10px;
+  padding:3px;
+}
+
+.bar > span
+{
+  background-color:#649EF7;
+  border-radius:5px;
+  display:block;
+  height:100%;
+}
+
+.btn-content,.knowhow h4
+{
+  text-align:center;
+}
+
+.container
+{
+  -webkit-animation:introShake;
+  -webkit-animation-delay:1s;
+  -webkit-animation-duration:1s;
+  -webkit-animation-fill-mode:both;
+  animation:introShake;
+  animation-delay:1s;
+  animation-duration:1s;
+  animation-fill-mode:both;
+  position:relative;
+  top:-20px;
+}
+
+.demo-1
+{
+  background:url(../img/demo/login-php.PNG) center;
+  background-size:100% 200px;
+  height:200px;
+  width:100%;
+}
+
+.demo-2
+{
+  background:url(../img/demo/drdoku.png) center;
+  background-size:100% 200px;
+  height:200px;
+  width:100%;
+}
+
+.emailIcon
+{
+  background-image:url(../img/icons/email20.png);
+  height:32px;
+  width:32px;
+}
+
+.iconLabel
+{
+  color:#27273B;
+  padding:5px 10px;
+  position:relative;
+  top:-10px;
+}
+
+.image
+{
+  border:1px solid black;
+}
+
+.image .image-content
+{
+  background-color:rgba(255,255,255,1);
+  height:200px;
+  opacity:0;
+  transition:all .4s;
+}
+
+.image-content
+{
+  background-color:rgba(255,255,255,1);
+  opacity:0;
+}
+
+
+.image:hover .image-content
+{
+  background-color:rgba(255,255,255,0.6);
+  opacity:1;
+}
+
+.knowhow
+{
+  padding:20px 0;
+  width:100%;
+}
+
+.linkninIcon
+{
+  background-image:url(../img/icons/linkedin.png);
+}
+
+.module.content
+{
+  padding:40px 0;
+}
+
+.module.parallax
+{
+  background-attachment:fixed;
+  background-position:50% 50%;
+  background-repeat:no-repeat;
+  background-size:cover;
+  height:400px;
+}
+
+.module.parallax #container
+{
+  color:#2222FF;
+  font-size:48px;
+  font-weight:700;
+  text-align:center;
+  text-shadow:0 0 10px rgba(0,0,0,0.2);
+  text-transform:uppercase;
+}
+
+.module.parallax-header
+{
+  background-image:url(../img/backgrounds/header13.jpg);
+  font-size:32px;
+}
+
+.module:last-child
+{
+  margin-bottom:0;
+}
+
+.niceList
+{
+  width:100%;
+}
+
+.niceList ol
+{
+  color:#2B133B;
+  font-family:Georgia, Times, serif;
+  font-size:16px;
+  font-style:italic;
+  padding-left:14px;
+}
+
+.niceList ol li p
+{
+  border-left:1px solid #2B133B;
+  color:#444948;
+  font-family:Arial;
+  font-size:16px;
+  font-style:normal;
+  padding:8px;
+}
+
+.niceList ol li p em
+{
+  display:block;
+}
+
+.quotes
+{
+  color:white;
+  font-family:'Open Sans';
+  font-size:14px;
+  font-weight:300;
+  padding:5px;
+  text-align:center;
+}
+
+article div.content
+{
+  padding:5px;
+  text-align:justify;
+}
+
+footer
+{
+  background-color:#1B1B29;
+  color:white;
+  text-align:center;
+}
+
+footer h3
+{
+  padding:20px 0 10px;
+}
+
+form h2,#about-me b
+{
+  color:#27273B;
+}
+
+header #bg-img
+{
+  height:auto;
+  max-height:100%;
+}
+
+header #bg-img img
+{
+  background-color:#666;
+  display:block;
+  left:0;
+  min-height:100%;
+  position:fixed;
+  top:0;
+}
+
+main
+{
+  background-image:url(../img/backgrounds/fleck-white.png);
+  font-family:'Open Sans';
+}
+
+nav
+{
+  background-color:rgba(255,255,255,0.5);
+  display:block;
+  position:fixed;
+  width:100%;
+  z-index:2;
+}
+
+nav ul
+{
+  float:right;
+}
+
+nav ul li
+{
+  color:black;
+  display:inline-block;
+  padding:5px 15px 0 0;
+}
+
+section
+{
+  padding:10px;
+}
+
+@media all and (min-width: 550px) {
+  #about-me article
+  {
+    display:inline-block;
+    width:45%;
+  }
+}
+
+@media all and (min-width: 600px) {
+  .module p
+  {
+    font-size:20px;
+  }
+  
+  .module.parallax h1
+  {
+    font-size:96px;
+  }
+  
+  module h2
+  {
+    font-size:42px;
+  }
+  
+  #description h3{
+    font-size: 44px;
+  }
+  
+  #description h4 {
+    font-size: 26px;
+  }
+  
+  article {
+    font-size: 20px;
+  }
+}
+
+@media all and (min-width: 960px) {
+  .module.parallax h1
+  {
+    font-size:46px;
+    margin:0;
+  }
+  
+  #description h3{
+    font-size: 48px;
+  }
+  
+  #description h4 {
+    font-size: 32px;
+  }
+  
+  article {
+    font-size: 20px;
+  }
+}
